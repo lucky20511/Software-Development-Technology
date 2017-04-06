@@ -24,5 +24,9 @@ Cache
 
 DNS could do the load balancing  but  the better way is just leave it to the real load balancer
 
-the load balancing might break the session
+
+
+Sticky session: \(if the user visit a same web multiple time, he will keep the session whatever.\)
+
+The load balancing might break the session. But the cookie can work for this.
 
