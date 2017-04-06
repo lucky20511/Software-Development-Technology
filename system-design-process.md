@@ -10,9 +10,9 @@ Illustrate the basic components of system and the relation between them.
 
 According to the use cases, constraints and the abstract design by the step1 and step2, you can roughly point the all possible bottlenecks of this system. So you can carefully take care of them in the later design steps.
 
-
-
 ## Step 4: Scalability
+
+
 
 
 
