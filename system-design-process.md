@@ -20,9 +20,9 @@ load balance
 
 Round Robin
 
-Cahce
+Cache
 
-DNS could do the load balancing
+DNS could do the load balancing  but  the better way is just leave it to the real load balancer
 
-
+the load balancing might break the session
 
