@@ -12,7 +12,17 @@ According to the use cases, constraints and the abstract design by the step1 and
 
 ## Step 4: Scalability
 
+Scale up vertical
 
+Scale out horizontal
+
+load balance
+
+Round Robin
+
+Cahce
+
+DNS could do the load balancing
 
 
 
