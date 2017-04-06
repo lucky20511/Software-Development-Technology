@@ -16,9 +16,17 @@ Scale up vertical
 
 Scale out horizontal
 
-load balance
+
+
+load balance Mechanism:
 
 Round Robin
+
+Consisten Hashing
+
+Rendezvous
+
+
 
 Cache
 
@@ -28,5 +36,11 @@ DNS could do the load balancing  but  the better way is just leave it to the rea
 
 Sticky session: \(if the user visit a same web multiple time, he will keep the session whatever.\)
 
+
+
 The load balancing might break the session. But the cookie can work for this.
+
+The information store in the cookie should avoid to be something might change.
+
+
 
