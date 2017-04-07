@@ -2,8 +2,6 @@ From [https://www.codementor.io/codeforgeek/manage-async-nodejs-callback-example
 
 # Handling the Asynchronous Nature of Node.js: Sample Project
 
-![](https://process.filestackapi.com/cache=expiry:max/resize=width:20/K1DRH0nFSumnurXvhT7f "Handling the Asynchronous Nature of Node.js: Sample Project")
-
 Node.js is built on top of Google's V8 engine, which in turns compiles JavaScript. As many of you already know, JavaScript is asynchronous in nature. Asynchronous is a programming pattern which provides the feature of non-blocking code i.e do not stop or do not depend on another function / process to execute a particular line of code.
 
 Asynchronous is great in terms of performance, resource utilization and system throughput. But there are some drawbacks:
@@ -16,64 +14,26 @@ If you are a function-oriented programmer, then it would be little difficult for
 
 Node.js uses ECMAScript as its core language, hence it adopts every aspect of ECMAScript-like generators, fibers, asynchronous nature of code, etc. Consider following code, which is blocked in nature.
 
-```
-var
- fs = 
-require
-(
-"fs"
-);
-fs.readFileSync(‘abc.txt’,
-function
-(
-err,data
-)
-{
-  
-if
-(!err) {
-    
-console
-.log(data);
+```js
+var fs = require("fs");
+fs.readFileSync(‘abc.txt’,function(err,data){
+  if(!err) {
+    console.log(data);
   }
 });
-
-console
-.log(
-"something else"
-);
-
+console.log("something else");
 ```
 
 Now consider following Asynchronous code:
 
-```
-var
- fs = 
-require
-(
-"fs"
-);
-fs.readFile(‘abc.txt’,
-function
-(
-err,data
-)
-{
-    
-if
-(!err) {
-     
-console
-.log(data);
+```js
+var fs = require("fs");
+fs.readFile(‘abc.txt’,function(err,data){
+    if(!err) {
+     console.log(data);
     }
 });
-
-console
-.log(
-"something else"
-);
-
+console.log("something else");
 ```
 
 ## Whats the Difference? {#whats-the-difference}
@@ -94,36 +54,16 @@ Having a series of callbacks after callbacks is known as the "callback hell" in 
 
 It looks something like this:
 
-```
-function
-readFile
-(
-filename,callback
-) 
-{
-  fs.readFile(filename,
-function
-(
-err,data
-)
-    
-if
-(
-!err
-) 
-{
-      processData(data,
-function
-(
-res
-)) 
-{
+```js
+function readFile(filename,callback) {
+  fs.readFile(filename,function(err,data)
+    if(!err) {
+      processData(data,function(res)) {
         printData(res);
       }
     }
   });
 }
-
 ```
 
 ### Why Isn't it Good to Have Multiple Callbacks? {#why-isnt-it-good-to-have-multiple-callbacks}
@@ -142,75 +82,24 @@ In prototyping, we create classes and functions inside a class and instantiate i
 
 Async is a utility module which provides straight-forward, powerful functions for working with asynchronous JavaScript. Functions are categorized in a collection, and control the flow along with utils.
 
-```
-async
-.map([
-'file1'
-,
-'file2'
-,
-'file3'
-], fs.stat, 
-function
-(
-err, results
-)
-{
-    
-// results is now an array of stats for each file
-
+```js
+async.map(['file1','file2','file3'], fs.stat, function(err, results){
+    // results is now an array of stats for each file
 });
 
-
-async
-.filter([
-'file1'
-,
-'file2'
-,
-'file3'
-], fs.exists, 
-function
-(
-results
-)
-{
-    
-// results now equals an array of the existing files
-
+async.filter(['file1','file2','file3'], fs.exists, function(results){
+    // results now equals an array of the existing files
 });
 
-
-async
-.parallel([
-    
-function
-(
-)
-{ ... },
-    
-function
-(
-)
-{ ... }
+async.parallel([
+    function(){ ... },
+    function(){ ... }
 ], callback);
 
-
-async
-.series([
-    
-function
-(
-)
-{ ... },
-    
-function
-(
-)
-{ ... }
+async.series([
+    function(){ ... },
+    function(){ ... }
 ]);
-
-
 ```
 
 Using Async.js, you can design parallel / Series / Batch flow very easily and efficiently. I will design a program to demonstrate same.
@@ -240,572 +129,169 @@ I have compiled and put the name of 3000 movies in JSON structure file for you! 
 
 It's similar to this format:
 
-```
+```js
 [  
   {  
-    
-"name"
-:
-"The 40-Year-Old Virgin"
-
+    "name":"The 40-Year-Old Virgin"
   },
 ...
 ]
-
 ```
 
 ### Database design. {#database-design}
 
 Create a database named "MoviesData", and run this query inside your SQL section.
 
-    CREATE
-    TABLE
-    `MoviesData`
-    .
-    `movie`
-
-    (
-
-    `id`
-    INT
-    NOT
-    NULL
-     AUTO_INCREMENT ,
-
-    `Name`
-    VARCHAR
-    (
-    50
-    ) 
-    NOT
-    NULL
-     ,
-
-    `ReleaseDate`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Year`
-    VARCHAR
-    (
-    10
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Cast`
-    VARCHAR
-    (
-    50
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Plot`
-    VARCHAR
-    (
-    50
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Genre`
-    VARCHAR
-    (
-    50
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Rated`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `RunTime`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Poster`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Country`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Language`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     , 
-
-    `Type`
-    VARCHAR
-    (
-    20
-    ) 
-    NOT
-    NULL
-     ,
-      PRIMARY 
-    KEY
-     (
-    `id`
-    )
-    )
-
-    ENGINE
-     = 
-    InnoDB
-    ;
-
+```js
+CREATE TABLE `MoviesData`.`movie` 
+(
+  `id` INT NOT NULL AUTO_INCREMENT ,
+  `Name` VARCHAR(50) NOT NULL ,
+  `ReleaseDate` VARCHAR(20) NOT NULL , 
+  `Year` VARCHAR(10) NOT NULL , 
+  `Cast` VARCHAR(50) NOT NULL , 
+  `Plot` VARCHAR(50) NOT NULL , 
+  `Genre` VARCHAR(50) NOT NULL , 
+  `Rated` VARCHAR(20) NOT NULL , 
+  `RunTime` VARCHAR(20) NOT NULL , 
+  `Poster` VARCHAR(20) NOT NULL , 
+  `Country` VARCHAR(20) NOT NULL , 
+  `Language` VARCHAR(20) NOT NULL , 
+  `Type` VARCHAR(20) NOT NULL ,
+  PRIMARY KEY (`id`)
+)
+ENGINE = InnoDB;
+```
 
 Make sure this table is created.
 
 ### Package.json {#packagejson}
 
-```
+```js
 {
-  
-"name"
-: 
-"sadique"
-,
-  
-"version"
-: 
-"0.0.1"
-,
-  
-"dependencies"
-: {
-    
-"async"
-: 
-"~0.9.0"
-,
-    
-"mysql"
-: 
-"^2.7.0"
-
+  "name": "sadique",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "~0.9.0",
+    "mysql": "^2.7.0"
   }
 }
-
-
 ```
 
 Install dependencies used by running the
 
-```
-npm 
-install
+```js
+
+npm install
 ```
 
 command.
 
 ### Server.js {#serverjs}
 
-```
-var
-async
- = 
-require
-(
-"async"
-);
-
-var
- http = 
-require
-(
-"http"
-);
-
-var
- movies = 
-require
-(
-"./inputJSON.json"
-);
-
-var
- mysql = 
-require
-(
-"mysql"
-);
-
-var
- movieArray = [];
-
-var
- pool;
-
-function
-processDB
-(
-) 
-{
-  
-var
- self = 
-this
-;
+```js
+var async = require("async");
+var http = require("http");
+var movies = require("./inputJSON.json");
+var mysql = require("mysql");
+var movieArray = [];
+var pool;
+function processDB() {
+  var self = this;
     pool = mysql.createPool({
-      
-connectionLimit
- : 
-100
-,
-      
-host
-          : 
-'localhost'
-,
-      
-user
-          : 
-'root'
-,
-      
-password
- : 
-''
-,
-      
-database
-  : 
-'MoviesData'
-,
-      
-debug
-       :  
-false
-
+      connectionLimit : 100,
+      host          : 'localhost',
+      user          : 'root',
+      password : '',
+      database  : 'MoviesData',
+      debug       :  false
     });
     self.collectMovies();
 }
-processDB.prototype.collectMovies = 
-function
-(
-) 
-{
-  
-var
- self = 
-this
-;
-  
-for
-(
-var
- i=
-0
-;i 
-<
- movies.length;i++) {
+processDB.prototype.collectMovies = function() {
+  var self = this;
+  for(var i=0;i < movies.length;i++) {
     movieArray.push(movies[i].name);
   }
-  
-async
-.eachSeries(movieArray,self.processMovie,
-function
-(
-)
-{
-    
-console
-.log(
-"I am done"
-);
+  async.eachSeries(movieArray,self.processMovie,function(){
+    console.log("I am done");
   });
 }
-processDB.prototype.processMovie = 
-function
-(
-movieName,callback
-) 
-{
-  
-var
- self = 
-this
-;
-  
-async
-.waterfall([
-  
-function
-(
-callback
-) 
-{
-    
-var
- response = 
-""
-;
-    movieName = movieName.split(
-' '
-).join(
-'+'
-);
-    http.get(
-"http://www.omdbapi.com/?t="
-+movieName+
-"
-&
-y=
-&
-plot=short
-&
-r=json"
-,
-function
-(
-res
-)
-{
-      res.on(
-'data'
-,
-function
-(
-chunk
-)
-{
+processDB.prototype.processMovie = function(movieName,callback) {
+  var self = this;
+  async.waterfall([
+  function(callback) {
+    var response = "";
+    movieName = movieName.split(' ').join('+');
+    http.get("http://www.omdbapi.com/?t="+movieName+"&y=&plot=short&r=json",function(res){
+      res.on('data',function(chunk){
       response += chunk;
       });
-      res.on(
-'end'
-,
-function
-(
-)
-{
-        
-if
-(
-typeof
- response === 
-"string"
-) {
-          response = 
-JSON
-.parse(response);
-    
-if
-(response.Response === 
-'False'
-) {
-            
-console
-.log(
-"Movie not found"
-);
-            callback(
-true
-);
-    } 
-else
- {
-      callback(
-null
-,response,movieName);
+      res.on('end',function(){
+        if(typeof response === "string") {
+          response = JSON.parse(response);
+    if(response.Response === 'False') {
+            console.log("Movie not found");
+            callback(true);
+    } else {
+      callback(null,response,movieName);
       }
-  } 
-else
- {
-          callback(
-true
-);
+  } else {
+          callback(true);
           }
       });
-      res.on(
-'error'
-,
-function
-(
-)
-{
-        
-console
-.log(
-"Some error i think"
-);
-        callback(
-true
-);
+      res.on('error',function(){
+        console.log("Some error i think");
+        callback(true);
       });
     });
   },
-  
-function
-(
-MovieResponse,Movie,callback
-) 
-{
-    
-var
- SQLquery = 
-'INSERT into ?? (??,??,??,??,??,??,??,??,??,??,??,??) VALUES '
-
-+ 
-'(?,?,?,?,?,?,?,?,?,?,?,?)'
-;
-    
-var
- inserts  = [
-"movie"
-,
-"Name"
-,
-"ReleaseDate"
-,
-"Year"
-,
-"Cast"
-,
-"Plot"
-,
-"Genre"
-,
-"Rated"
-,
-"RunTime"
-,
-"Poster"
-,
-"Country"
-,
-"Language"
-,
-"Type"
-,MovieResponse.Title,MovieResponse.Released,MovieResponse.Year,MovieResponse.Actors,MovieResponse.Plot,MovieResponse.Genre,MovieResponse.imdbRating,MovieResponse.Runtime,MovieResponse.Poster,MovieResponse.Country,MovieResponse.Language,MovieResponse.Type];
+  function(MovieResponse,Movie,callback) {
+    var SQLquery = 'INSERT into ?? (??,??,??,??,??,??,??,??,??,??,??,??) VALUES '
++ '(?,?,?,?,?,?,?,?,?,?,?,?)';
+    var inserts  = ["movie","Name","ReleaseDate","Year","Cast","Plot","Genre","Rated","RunTime","Poster","Country","Language","Type",MovieResponse.Title,MovieResponse.Released,MovieResponse.Year,MovieResponse.Actors,MovieResponse.Plot,MovieResponse.Genre,MovieResponse.imdbRating,MovieResponse.Runtime,MovieResponse.Poster,MovieResponse.Country,MovieResponse.Language,MovieResponse.Type];
     SQLquery = mysql.format(SQLquery,inserts);
 
-    pool.getConnection(
-function
-(
-err,connection
-)
-{
-      
-if
-(err) {
+    pool.getConnection(function(err,connection){
+      if(err) {
         self.stop(err);
-        
-return
-;
-      } 
-else
- {
-          connection.query(SQLquery,
-function
-(
-err,rows
-)
-{
+        return;
+      } else {
+          connection.query(SQLquery,function(err,rows){
             connection.release();
-            
-if
-(err) {
-              
-console
-.error(
-'error running query'
-, err);
-            } 
-else
- {
-             
-console
-.log(
-"Inserted rows in DB"
-);
+            if(err) {
+              console.error('error running query', err);
+            } else {
+             console.log("Inserted rows in DB");
             }
           });
         callback();
   }
       });
-}],
-function
-(
-)
-{
+}],function(){
       callback();
 });
 }
-processDB.prototype.stop = 
-function
-(
-err
-) 
-{
-    
-console
-.log(
-"ISSUE WITH MYSQL \n"
- + err);
-    process.exit(
-1
-);
+processDB.prototype.stop = function(err) {
+    console.log("ISSUE WITH MYSQL \n" + err);
+    process.exit(1);
 }
-
-new
- processDB();
-
+new processDB();
 ```
 
 ### Running the program {#running-the-program}
 
 Let’s run the code. Open up your terminal, switch to the project directory and run
 
-```
-node
-Server
-.js
-
+```js
+node Server.js
 ```
 
 to run the program.
 
 Since we are running this in series, so for 3000 movies it will take around 7-8 minutes to dump the database.![](https://process.filestackapi.com/cache=expiry:max/oSIjf19RTE2H4PTPPBMA "dump database")
 
-If you want to try and run this in parallel, then the OMDB api will block your IP, just to avoid a DOS attack due to getting lots of HTTP requests on a single timestamp. Here is a screenshot, I tried that![](https://twemoji.maxcdn.com/2/72x72/1f609.png "😉")![](https://process.filestackapi.com/cache=expiry:max/WPGq9JRnRNyi8uLZFJcm "OMDB api")
+If you want to try and run this in parallel, then the OMDB api will block your IP, just to avoid a DOS attack due to getting lots of HTTP requests on a single timestamp. Here is a screenshot, I tried that![](https://process.filestackapi.com/cache=expiry:max/WPGq9JRnRNyi8uLZFJcm "OMDB api")
 
 This is how it will work in series. It will pick the movie name from the file one at a time, and call the`processMovie`function. This function will call the OMDB API and then push it into your DB and gives a callback to the callee to provide next movie name.
 
