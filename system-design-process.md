@@ -32,7 +32,17 @@ Consisten Hashing
 
 Rendezvous
 
-Cache
+
+
+Cache:
+
+Database cache  such as mysql cache
+
+memcached
+
+
+
+
 
 DNS could do the load balancing  but  the better way is just leave it to the real load balancer
 
