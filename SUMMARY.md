@@ -2,10 +2,9 @@
 
 ## System Design
 
-* [Introduction](README.md)
 * [System Design Process](system-design-process.md)
-  * Scalable Software Architecture Mateirals
 * [Scalable Software Architecture Materials](scalable-software-architecture-materials.md)
+* [Introduction](README.md)
 
 ## Reliable Data Transmission
 
