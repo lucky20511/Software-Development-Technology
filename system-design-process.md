@@ -32,17 +32,11 @@ Consisten Hashing
 
 Rendezvous
 
-
-
 Cache:
 
 Database cache  such as mysql cache
 
 memcached
-
-
-
-
 
 DNS could do the load balancing  but  the better way is just leave it to the real load balancer
 
@@ -51,4 +45,10 @@ Sticky session: \(if the user visit a same web multiple time, he will keep the s
 The load balancing might break the session. But the cookie can work for this.
 
 The information store in the cookie should avoid to be something might change.
+
+
+
+Data Replication
+
+Master-Slave
 
