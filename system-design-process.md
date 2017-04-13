@@ -1,3 +1,7 @@
+**CS75 \(Summer 2012\) Lecture 9 Scalability Harvard Web Development David Malan**
+
+[https://www.youtube.com/watch?v=-W9F\_\_D3oY4&t=4224s](https://www.youtube.com/watch?v=-W9F__D3oY4&t=4224s)
+
 ## Step 1: Use cases and Constraints
 
 Scope the problem. Don't make assumption, ask the question to get the information of use cases\(the service or function you'e gonna provide\) and the constraints\(the data size you're gonna cope with or you need to store\) you might meet.
@@ -45,6 +49,8 @@ Sticky session: \(if the user visit a same web multiple time, he will keep the s
 The load balancing might break the session. But the cookie can work for this.
 
 The information store in the cookie should avoid to be something might change.
+
+
 
 
 
