@@ -104,6 +104,29 @@ async.series([
 
 Using Async.js, you can design parallel / Series / Batch flow very easily and efficiently. I will design a program to demonstrate same.
 
+
+
+# What is the difference between async.waterfall and async.series
+
+It appears that
+
+`async.waterfall`
+
+allows each function to pass its results on to the next function, while
+
+`async.series`
+
+passes all results to the final callback. At a higher level,
+
+`async.waterfall`
+
+would be for a data pipeline \("given 2, multiply it by 3, add 2, and divide by 17"\), while
+
+`async.series`
+
+would be for discrete tasks that must be performed in order, but are otherwise separate.  
+
+
 ## Sample Project: {#sample-project}
 
 We are going to design a database dumper. Database dumper is a program which ETL guys use to put lots of data in the database for application programmers. In our scene, since we don’t have any production ETL project, we will try and dump a single table that has lots of Movie data.
@@ -181,7 +204,6 @@ Make sure this table is created.
 Install dependencies used by running the
 
 ```js
-
 npm install
 ```
 
