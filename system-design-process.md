@@ -40,7 +40,7 @@ Cache:
 
 Database cache  such as mysql cache
 
-memcached
+memcached memory cahced
 
 DNS could do the load balancing  but  the better way is just leave it to the real load balancer
 
@@ -52,9 +52,25 @@ The information store in the cookie should avoid to be something might change.
 
 
 
+heart beat
+
 
 
 Data Replication
 
 Master-Slave
+
+Master-Master
+
+
+
+Load Balancer
+
+Active Active
+
+Active Passive
+
+
+
+SSL
 
