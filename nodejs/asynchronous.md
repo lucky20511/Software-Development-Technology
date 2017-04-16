@@ -104,8 +104,6 @@ async.series([
 
 Using Async.js, you can design parallel / Series / Batch flow very easily and efficiently. I will design a program to demonstrate same.
 
-
-
 # What is the difference between async.waterfall and async.series
 
 It appears that
@@ -124,7 +122,62 @@ would be for a data pipeline \("given 2, multiply it by 3, add 2, and divide by 
 
 `async.series`
 
-would be for discrete tasks that must be performed in order, but are otherwise separate.  
+would be for discrete tasks that must be performed in order, but are otherwise separate.
+
+# What is the difference between async.parallel and async.series
+
+`async.series`invokes your functions serially \(waiting for each preceding one to finish before starting next\).`async.parallel`will launch them all simultaneously \(or whatever passes for simultaneous in one-thread land, anyway\).
+
+The main callback is the one optionally supplied in the call to`async.parallel`or`async.series`\(The signature is`async.parallel(tasks, [callback])`\)
+
+So what actually happens is this:
+
+## parallel:
+
+* `parallel`
+  launches all the tasks, then waits
+* all four tasks schedule their timeouts
+* timeout 100 fires, adds its result \(result is now
+  `[ , "Two"]`
+  \)
+* timeout 200 fires, adds its result \(result is now
+  `["One", "Two"]`
+  \)
+* timeout 400 fires, returns error and
+  `undefined`
+  as result \(result is now
+  `["One", "Two", undefined]`
+  \)
+* `parallel`
+  notices an error, immediately returns the result it received so far
+* timeout 600 fires, but no-one cares about the return result
+
+## series:
+
+* `series`
+  fires the first task; it schedules its timeout.
+* `series`
+  waits till callback is called 200ms later, then adds the result. \(result is now
+  `["One"]`
+  \)
+* `series`
+  fires the second task; it schedules its timeout.
+* `series`
+  waits till callback is called 100ms later, then adds the result. \(result is now
+  `["One", "Two"]`
+  \)
+* `series`
+  fires the third task; it schedules its timeout.
+* `series`
+  waits till callback is called 400ms later, then adds the result and exits due to error. \(result is now
+  `["One", "Two", undefined]`
+  \)
+* the fourth task is never executed, and its timeout is never scheduled.
+
+The fact that you got the same result is due to the fact that you rely on`setTimeout`in your tasks.
+
+As to how to use`parallel`usefully, try to download a hundred web pages with`parallel`; then do the same with`series`. See what happens.
+
 
 
 ## Sample Project: {#sample-project}
