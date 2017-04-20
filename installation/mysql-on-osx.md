@@ -20,5 +20,35 @@ sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 ```
 
-Step5. Login by the temporary password
+Step5. Login by temporary password
+
+```
+mysql -u root -h 127.0.0.1 -p
+```
+
+Step6. Change the password of root
+
+```
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'lucky20511';
+```
+
+Step7. Logout and Login to check
+
+```
+mysql -u root -p
+```
+
+
+
+Some Easy Commands of MySQL:
+
+```
+SHOW DATABASES;
+```
+
+```
+USE some-database;
+```
+
+
 
