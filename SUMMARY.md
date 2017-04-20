@@ -27,3 +27,7 @@
 
 * [Polymorphism](coding/polymorphism.md)
 
+## Installation
+
+* [MySQL on OSX](installation/mysql-on-osx.md)
+
