@@ -40,8 +40,6 @@ mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'lucky20511';
 mysql -u root -p
 ```
 
-
-
 # Some Easy Commands of MySQL
 
 #### Show existing databases
@@ -53,7 +51,7 @@ SHOW DATABASES;
 #### Select database
 
 ```
-
+USE database-name;
 ```
 
 #### Show existing tables
