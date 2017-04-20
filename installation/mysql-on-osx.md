@@ -1,16 +1,18 @@
-Step1. Download the MySQL Installation File
+# Installation Steps
 
-[https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
+#### Step1. Download the MySQL Installation File
 
-Step2. Install and Keep the temporary password
+#### [https://dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/)
 
-Step3. Export the binary file to mysql
+#### Step2. Install and Keep the temporary password
+
+#### Step3. Export the binary file to mysql
 
 ```
 export PATH=$PATH:/usr/local/mysql/bin/
 ```
 
-Step4. Run and Terminate the mysql CLI
+#### Step4. Run and Terminate the mysql CLI
 
 ```
 sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
@@ -20,42 +22,44 @@ sudo launchctl load -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 sudo launchctl unload -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist
 ```
 
-Step5. Login by temporary password
+#### Step5. Login by temporary password
 
 ```
 mysql -u root -h 127.0.0.1 -p
 ```
 
-Step6. Change the password of root
+#### Step6. Change the password of root
 
 ```
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'lucky20511';
 ```
 
-Step7. Logout and Login to check
+#### Step7. Logout and Login to check
 
 ```
 mysql -u root -p
 ```
 
-Some Easy Commands of MySQL:
 
-Show existing databases:
+
+# Some Easy Commands of MySQL
+
+#### Show existing databases
 
 ```
 SHOW DATABASES;
 ```
 
-Select database:
+#### Select database
 
 ```
-USE some-database;
-```
-
-Show existing tables:
 
 ```
-SHOW TABLES; 
+
+#### Show existing tables
+
+```
+SHOW TABLES;
 ```
 
 
