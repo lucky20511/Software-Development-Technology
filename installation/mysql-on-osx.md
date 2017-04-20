@@ -38,16 +38,24 @@ Step7. Logout and Login to check
 mysql -u root -p
 ```
 
-
-
 Some Easy Commands of MySQL:
+
+Show existing databases:
 
 ```
 SHOW DATABASES;
 ```
 
+Select database:
+
 ```
 USE some-database;
+```
+
+Show existing tables:
+
+```
+SHOW TABLES; 
 ```
 
 
