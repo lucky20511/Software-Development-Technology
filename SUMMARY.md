@@ -21,6 +21,7 @@
 * [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
 * [Binder to Service](android/binder-to-serivce.md)
 * [AIDL](android/aidl.md)
+* [Messenger](android/implicit-intents-vs-broadcast-receivers/messenger.md)
 
 ## ELK
 
