@@ -19,7 +19,7 @@
 
 * [Communication Methods](android/communication-methods.md)
 * [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
-* [Binder to Serivce](android/binder-to-serivce.md)
+* [Binder to Service](android/binder-to-serivce.md)
 
 ## ELK
 
