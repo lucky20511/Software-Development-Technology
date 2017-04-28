@@ -15,7 +15,7 @@ The following are the list of method for the communication between activities an
 4. AIDL            **Bounded**
 5. HTTP Server    **Bounded  &  UnBounded **
 
-| Method | Service Type | FlexibilityFlexibilityFlexibility | Direction | Speed |
+| Method | Service Type | Flexibility | Direction | Speed |
 | :--- | :--- | :--- | :--- | :--- |
 | Intent + bind or start | Bounded & Unbounded | High | 1 way | Slow |
 | Broadcast | Bounded & Unbounded | High | 2 way | Slow |
