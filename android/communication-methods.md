@@ -8,17 +8,14 @@ The following are the list of method for the communication between activities an
 2. Intent       one-way  **Intent-Filters**
 3. IPC     \(Messenger\)
 
-1. AIDL
-2. Binder
-3. Http Server-Client
+4. AIDL
 
-
+5. Binder
+6. Http Server-Client
 
 An`Intent`is "sent" when one app or`Activity`wants to launch another to do something very specific. For example, a file-manager might want to launch an image viewer or video player. Your app might want to launch a very specific`Activity`within another one of your apps, etc. The communication by specific intents \(i.e. including package name and component name\) can not easily be intercepted, so it's somewhat more secure. Most importantly, there's only and exactly one "receiver" -- if none can be found, the`Intent`will fail.
 
 Further, a`BroacastReceiver`will be active within an`Activity`or`Service`and received broadcasts will generally only change state and/or do minor UI updates... for example, you might disable a few actions if your internet connectivity is dropped. By comparison, a specific Intent will usually launch a new`Activity`or bring an existing one to the foreground.
-
-
 
 1\)IPC does not send data from one component to another \(it can, but its an inefficient way to do that\). IPC sends data from one process to another. An Android app is generally one process, although it doesn't have to be \(services are sometimes placed into another process by the developer\). The reason this is an important difference is that processes cannot share memory, so special methods like IPC are needed to send any data between them.
 
@@ -31,12 +28,6 @@ Further, a`BroacastReceiver`will be active within an`Activity`or`Service`and rec
 5\)An Intent object is an abstraction for all the data needed to start a service or activity in Android. It will include parameters, which may or may not be in Parcels. It may or may not use IPC to send those parameters \(if the target Activitiy or Service is in another APK it will. If it isn't it may not\).
 
 I think the problem here is you don't really understand what a process is, what an Android component is, and how processes actually communicate. I suggest doing some studying up on that.
-
-
-
-
-
-
 
 # Binder
 
@@ -302,11 +293,114 @@ public class TestService extends Service {
 }
 ```
 
-
-
-
-
 # AIDL
+
+Activity
+
+```java
+public class MainActivity extends Activity implements ServiceConnection{
+
+    IRemoteService mService;
+    TextView countTextView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Intent intent = new Intent(this,TestService.class);
+        bindService(intent,this, Context.BIND_AUTO_CREATE);
+    }
+
+    @Override
+    public void onServiceConnected(ComponentName name, IBinder service) {
+
+        mService = IRemoteService.Stub.asInterface(service);
+        try {
+            mService.registerCallback(mClientBinder);
+        } catch (RemoteException e) {
+            e.printStackTrace();
+        }
+    }
+
+    @Override
+    public void onServiceDisconnected(ComponentName name) {}
+
+
+    public final IServiceAidlCallback.Stub mClientBinder = new IServiceAidlCallback.Stub(){
+        public void basicTypes(int anInt, long aLong, boolean aBoolean,
+                               float aFloat, double aDouble, String aString){
+            Log.d("Spam","Callback Received");
+        }
+    };
+}
+```
+
+Service
+
+```java
+public class TestService extends Service {
+
+    private Random r = new Random();
+
+    private IServiceAidlCallback mClientCallback;
+
+    public TestService() {
+        super();
+    }
+
+    @Override
+    public void onRebind(Intent intent) {
+        super.onRebind(intent);
+    }
+
+    @Override
+    public void onCreate() {
+        super.onCreate();
+    }
+
+    @Override
+    public int onStartCommand(Intent intent, int flags, int startId) {
+        return super.onStartCommand(intent, flags, startId);
+    }
+
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
+
+    public final IRemoteService.Stub mBinder = new IRemoteService.Stub(){
+        public void registerCallback(IBinder callback){
+
+            mClientCallback = IServiceAidlCallback.Stub.asInterface(callback);
+            initSpam();
+
+        }
+    };
+
+    public void initSpam(){
+        for(int i=0;i<10;i++) {
+            TimerTask task = new TimerTask() {
+                @Override
+                public void run() {
+                    try {
+                        mClientCallback.basicTypes(
+                                r.nextInt(),
+                                r.nextLong(),
+                                r.nextBoolean(),
+                                r.nextFloat(),
+                                r.nextDouble(),
+                                String.valueOf(r.nextInt()));
+                    } catch (RemoteException e) {
+                        e.printStackTrace();
+                    }
+                }
+            };
+            Timer timer = new Timer();
+            timer.scheduleAtFixedRate(task,1,1);
+        }
+    }
+}
+```
 
 
 
