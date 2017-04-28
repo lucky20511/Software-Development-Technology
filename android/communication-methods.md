@@ -9,19 +9,31 @@ The following are the list of method for the communication between activities an
 
 ### Inter-Process \(Running Time Binding\)
 
-1. Intent \(along with Bundles\) +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded     Bi-directional**
+1. Intent  +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded     Bi-directional**
 2. Broadcast      **Bounded  &  unBounded ** 
 3. Messenger     **Bounded  &  UnBounded **
 4. AIDL            **Bounded**
 5. Http Server-Client    **Bounded  &  UnBounded **
 
+
+
+
+
+
+
+
+
+
+
+
+
 An`Intent`is "sent" when one app or`Activity`wants to launch another to do something very specific. For example, a file-manager might want to launch an image viewer or video player. Your app might want to launch a very specific`Activity`within another one of your apps, etc. The communication by specific intents \(i.e. including package name and component name\) can not easily be intercepted, so it's somewhat more secure. Most importantly, there's only and exactly one "receiver" -- if none can be found, the`Intent`will fail.
 
 Further, a`BroacastReceiver`will be active within an`Activity`or`Service`and received broadcasts will generally only change state and/or do minor UI updates... for example, you might disable a few actions if your internet connectivity is dropped. By comparison, a specific Intent will usually launch a new`Activity`or bring an existing one to the foreground.
 
-1\)IPC does not send data from one component to another \(it can, but its an inefficient way to do that\). IPC sends data from one process to another. An Android app is generally one process, although it doesn't have to be \(services are sometimes placed into another process by the developer\). The reason this is an important difference is that processes cannot share memory, so special methods like IPC are needed to send any data between them.
 
-2\)Data sent between components do not have to be a Parcel. That's one way, and its the way Android uses when sending startup parameters around. But it's not necessary.
+
+
 
 3\)Using a Binder to talk to a service is only possible if the two are in the same process. Its a method to totally avoid using IPC.
 
@@ -61,9 +73,7 @@ Android Interface Definition Language \(AIDL\) decomposes objects into primitive
 
 To use AIDL directly, you must create an`.aidl`file that defines the programming interface. The Android SDK tools use this file to generate an abstract class that implements the interface and handles IPC, which you can then extend within your service.
 
-### Is bindService necessary for a local \(same process\) Service?
-
-It depends on whether you need to call instance methods on that service or not. StartService gets the service up and running and working on whatever Intent you sent it but you still can't interact with it because you don't have a reference to the service object. Calling bindService is what gives that reference so that you can call instance methods on it. If you don't need that, you don't need bindService.
+### 
 
 # 
 
