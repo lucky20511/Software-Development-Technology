@@ -25,6 +25,7 @@
 * [Life Cycle](life-cycle.md)
 * [Android HTTP Server](android/android-http-server.md)
 * [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
+* [IDL](android/idl.md)
 
 ## ELK
 
