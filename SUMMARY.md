@@ -15,18 +15,6 @@
 * [Asynchronous](nodejs/asynchronous.md)
 * [Avoiding Callback Hell in Node.js](nodejs/avoiding-callback-hell-in-nodejs.md)
 
-## Android
-
-* [Communication Methods](android/communication-methods.md)
-* [Binder to Service](android/binder-to-serivce.md)
-* [AIDL](android/aidl.md)
-* [Messenger](android/implicit-intents-vs-broadcast-receivers/messenger.md)
-* [Intent IPC](intent-with-bundle.md)
-* [Life Cycle](life-cycle.md)
-* [Android HTTP Server](android/android-http-server.md)
-* [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
-* [IDL](android/idl.md)
-
 ## ELK
 
 * [What is ELK Stack](elk/what-is-elk-stack.md)
