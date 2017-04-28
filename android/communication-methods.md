@@ -7,11 +7,9 @@ The following are the list of method for the communication between activities an
 1. .jar Library
 2. Binder to Service
 
-
-
 ### Inter-Process \(Running Time Binding\)
 
-1. Intent  +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded     Bi-directional**
+1. Intent  +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded**
 2. Broadcast      **Bounded  &  unBounded ** 
 3. Messenger     **Bounded  &  UnBounded **
 4. AIDL            **Bounded**
