@@ -9,7 +9,7 @@ The following are the list of method for the communication between activities an
 
 ### Inter-Process \(Running Time Binding\)
 
-1. Intent \(along with Bundles\) +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded     One Way **
+1. Intent \(along with Bundles\) +bindService\(\)  or  +startService\(\)        **Bounded  &  unBounded     Bi-directional**
 2. Broadcast      **Bounded  &  unBounded ** 
 3. Messenger     **Bounded  &  UnBounded **
 4. AIDL            **Bounded**
