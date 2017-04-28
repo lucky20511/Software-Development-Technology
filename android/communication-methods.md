@@ -4,7 +4,7 @@ The following are the list of method for the communication between activities an
 
 ### Intra-Process \(Early Binding\)
 
-1. .Jar Library
+1. .jar Library
 2. Binder to Service
 
 ### Inter-Process \(Running Time Binding\)
