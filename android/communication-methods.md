@@ -1,4 +1,4 @@
-Communication Methods
+# Communication Methods
 
 The following are the list of method for the communication between activities and services:
 
