@@ -2,20 +2,21 @@
 
 The following are the list of method for the communication between activities and services:
 
+### Intra-Process \(Early Binding\)
 
+1. .Jar Library
+2. Binder to Service
 
-1. Broadcast      broadcastReciever
-2. Intent       one-way  **Intent-Filters**
-3. Binder
+### Inter-Porcess \(Running Time Binding\)
 
-4. IPC    
+1. Broadcast      unBounded Service
+2. Intent       one-way  **Intent-Filters   **unBounded Service
 
-5.  \(Messenger\)
+1. Messenger     Bounded Service
 
-6. AIDL
+2. AIDL            Bounded Service
 
-7. 
-8. Http Server-Client
+1. Http Server-Client    UnBounded     
 
 An`Intent`is "sent" when one app or`Activity`wants to launch another to do something very specific. For example, a file-manager might want to launch an image viewer or video player. Your app might want to launch a very specific`Activity`within another one of your apps, etc. The communication by specific intents \(i.e. including package name and component name\) can not easily be intercepted, so it's somewhat more secure. Most importantly, there's only and exactly one "receiver" -- if none can be found, the`Intent`will fail.
 
