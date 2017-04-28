@@ -23,8 +23,8 @@
 * [Messenger](android/implicit-intents-vs-broadcast-receivers/messenger.md)
 * [Intent IPC](intent-with-bundle.md)
 * [Life Cycle](life-cycle.md)
-* [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
 * [Android HTTP Server](android/android-http-server.md)
+* [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
 
 ## ELK
 

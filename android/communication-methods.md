@@ -13,15 +13,15 @@ The following are the list of method for the communication between activities an
 2. Broadcast      **Bounded  &  unBounded ** 
 3. Messenger     **Bounded  &  UnBounded **
 4. AIDL            **Bounded**
-5. Http Server-Client    **Bounded  &  UnBounded **
+5. HTTP Server    **Bounded  &  UnBounded **
 
-
-
-
-
-
-
-
+| Method | Service Type | FlexibilityFlexibilityFlexibility | Direction | Speed |
+| :--- | :--- | :--- | :--- | :--- |
+| Intent | Bounded & | High | 1 way | Slow |
+| Broadcast | Bounded & Unbounded | High | 2 way | Slow |
+| AIDL | Bounded | Medium | 2 way | Faster |
+| Messenger | Bounded & Unbounded | Medium High | 2 way | Fast |
+| HTTP Server | Bounded & Unbounded | High | 2 way | Slow |
 
 
 
@@ -30,10 +30,6 @@ The following are the list of method for the communication between activities an
 An`Intent`is "sent" when one app or`Activity`wants to launch another to do something very specific. For example, a file-manager might want to launch an image viewer or video player. Your app might want to launch a very specific`Activity`within another one of your apps, etc. The communication by specific intents \(i.e. including package name and component name\) can not easily be intercepted, so it's somewhat more secure. Most importantly, there's only and exactly one "receiver" -- if none can be found, the`Intent`will fail.
 
 Further, a`BroacastReceiver`will be active within an`Activity`or`Service`and received broadcasts will generally only change state and/or do minor UI updates... for example, you might disable a few actions if your internet connectivity is dropped. By comparison, a specific Intent will usually launch a new`Activity`or bring an existing one to the foreground.
-
-
-
-
 
 3\)Using a Binder to talk to a service is only possible if the two are in the same process. Its a method to totally avoid using IPC.
 
