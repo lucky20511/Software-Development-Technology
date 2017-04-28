@@ -5,7 +5,6 @@
 * [System Design Process](system-design-process.md)
 * [Scalable Software Architecture Materials](scalable-software-architecture-materials.md)
 * [Introduction](README.md)
-* [Life Cycle](life-cycle.md)
 
 ## Reliable Data Transmission
 
@@ -23,6 +22,7 @@
 * [AIDL](android/aidl.md)
 * [Messenger](android/implicit-intents-vs-broadcast-receivers/messenger.md)
 * [Intent IPC](intent-with-bundle.md)
+* [Life Cycle](life-cycle.md)
 * [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
 
 ## ELK
