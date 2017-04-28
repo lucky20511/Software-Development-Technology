@@ -7,16 +7,15 @@ The following are the list of method for the communication between activities an
 1. .Jar Library
 2. Binder to Service
 
-### Inter-Porcess \(Running Time Binding\)
+### Inter-Process \(Running Time Binding\)
 
-1. Broadcast      unBounded Service
-2. Intent       one-way  **Intent-Filters   **unBounded Service
+1. Intent \(along with Bundles\)    **unBounded Service**
+2. Broadcast      **unBounded Service** 
+3. Messenger     Bounded Service
+4. AIDL            Bounded Service
+5. Http Server-Client    UnBounded
 
-1. Messenger     Bounded Service
 
-2. AIDL            Bounded Service
-
-1. Http Server-Client    UnBounded     
 
 An`Intent`is "sent" when one app or`Activity`wants to launch another to do something very specific. For example, a file-manager might want to launch an image viewer or video player. Your app might want to launch a very specific`Activity`within another one of your apps, etc. The communication by specific intents \(i.e. including package name and component name\) can not easily be intercepted, so it's somewhat more secure. Most importantly, there's only and exactly one "receiver" -- if none can be found, the`Intent`will fail.
 
