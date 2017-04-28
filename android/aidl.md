@@ -1,4 +1,4 @@
-# AIDL \(Two way interface exposure\)
+# AIDL \(Two way Communication\)
 
 AIDL for Activity calls Service Intent  \(**Implemented** in **Service** and **Used** in **Activity**\)
 
@@ -14,7 +14,6 @@ interface IRemoteService {
 AIDL for  Service Calls back to Activity  \(**Implemented** in **Activity** and **Used** in **Service**\)
 
 ```java
-
 interface IServiceAidlCallback {
 
     void basicTypes(int aI, long aL, boolean aB, float aF, double aD, String aS)
