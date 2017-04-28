@@ -18,7 +18,7 @@
 ## Android
 
 * [Communication Methods](android/communication-methods.md)
-* Implicit Intents v.s Broadcast Receivers
+* [Implicit Intents v.s Broadcast Receivers](android/implicit-intents-vs-broadcast-receivers.md)
 
 ## ELK
 
