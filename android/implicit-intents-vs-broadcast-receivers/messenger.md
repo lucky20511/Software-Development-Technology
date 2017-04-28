@@ -1,4 +1,4 @@
-# IPC
+# Messenger
 
 Activity
 
