@@ -1,4 +1,4 @@
-# Intent
+# Intent  \(One Way Communication\)
 
 Activity
 
