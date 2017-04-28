@@ -6,8 +6,6 @@ Interface Definition Language \(IDL\) is a standard language for defining functi
 
 However, it can be handy to have a working knowledge of IDL in case you need to work some up on your own or need to read it to understand how to use someone else’s component. \(For example, the W3C’s DOM specification documentation makes extensive use of IDL.\) If nothing else, IDL is important for historical perspective, since it could be viewed as paving the way for technologies such as SOAP and WSDL, which make Web services possible.
 
-
-
 #### A very brief history of IDL
 
 IDL started out as part of the Open Group’s Distributed Computing Environment \([DCE](http://www.opengroup.org/dce/info/papers/tog-dce-pd-1296.htm)\). The DCE created a standard way of carrying out remote procedure calls \(RPCs\), or calling a function across a network. This entails a process called marshalling, which involves gathering the data needed to make that function call to the remote computer.
@@ -18,19 +16,19 @@ Later, when work began on dynamic component reuse standards, such as CORBA and C
 
 Today, there are several varieties of IDL in use: OMG/CORBA, Microsoft, and KDE-DCOP are a few of the various implementations. Vendors supporting each implementation provide compilers that convert IDL source into type libraries describing the component in question, so type checking can be done at compile time for the application using the component.
 
-####  IDL in action
+#### IDL in action
 
 You can’t write actual programs in IDL because it lacks the logic and flow control structures you need to do anything useful with it. Instead, IDL concentrates on type definitions, both for primitive and class types, so you use it instead to define interfaces, not implementations. For example, a function used to calculate sales tax on an order might be defined like this:
 
-```
-float  calculate_tax ( in float taxable_amount );
+```java
+float  calculate_tax ( in float taxable_amount );
 ```
 
 Here you have a function, calculate\_tax, that receives a single input \(by value\) parameter, taxable\_amount, of type float. The function also returns a value of type float. Notice that there is no implementation of the calculate\_tax function here; you provide that in your native language.
 
 Function declarations are collected into interfaces, which represent all the defined methods for a class. These interfaces are defined using the standard curly braces, C-style class declaration. To extend the above example, you might include the calculate\_tax function, along with some other functions, in an order interface, like this:
 
-```
+```java
 interface order {
 
     float calculate_tax ([in] float taxable_amount);
@@ -42,18 +40,13 @@ interface order {
 }
 ```
 
-
-
 Once you’ve defined an interface, it can be used as a parameter type for function declarations and may be extended by other interfaces using the C extension operator \(:\). In my example, I assume you’ve also created an item\_list interface, which you would use as the sole parameter of the calculate\_total and place\_order functions.
 
-  
 You create new non interface types using the typedef statement, which as you’d expect by now looks very similar to the format used in C. For example, I could create a new Currency type using the following typedef statement:
 
-```
+```java
 typedef float Currency
 ```
-
-
 
 #### Primitive types and attributes
 
@@ -63,7 +56,7 @@ One thing I’ve glossed over up until now is attributes. The \[in\] and \[out\]
 
 Combining these attributes into one \[in,out\] attribute gives you a bidirectional parameter. There will be other attributes supported by the IDL variant you use.
 
-####  For further reading
+#### For further reading
 
 Below, I've listed some Web resources for the IDL flavors I mentioned in this article, so you can get more information if you need it.
 
@@ -73,9 +66,6 @@ Below, I've listed some Web resources for the IDL flavors I mentioned in this ar
 * Check out the documentation available on MSDN for information on
   [Microsoft Interface Definition Language](http://msdn.microsoft.com/library/default.asp?url=/library/en-us/midl/midl/midl_start_page.asp?frame=true)
   \(MIDL, Microsoft’s IDL variant for COM programmers\).
-
-  
-
 
 
 
