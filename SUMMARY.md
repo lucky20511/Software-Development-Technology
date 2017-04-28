@@ -5,6 +5,7 @@
 * [System Design Process](system-design-process.md)
 * [Scalable Software Architecture Materials](scalable-software-architecture-materials.md)
 * [Introduction](README.md)
+* [Life Cycle](life-cycle.md)
 
 ## Reliable Data Transmission
 
