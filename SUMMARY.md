@@ -6,6 +6,10 @@
 * [Scalable Software Architecture Materials](scalable-software-architecture-materials.md)
 * [Introduction](README.md)
 
+## Android
+
+* [Communication Methods](android/communication-methods.md)
+
 ## Reliable Data Transmission
 
 * [Apache Kafka](reliability-data-transmission/apache-kafka.md)
