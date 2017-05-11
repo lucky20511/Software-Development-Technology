@@ -13,6 +13,7 @@
 * [AIDL](android/aidl.md)
 * [Messenger](android/messenger.md)
 * [Intent IPC](android/intent-ipc.md)
+* [Life Cycle](android/life-cycle.md)
 
 ## Reliable Data Transmission
 
