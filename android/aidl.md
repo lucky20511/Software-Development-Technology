@@ -98,7 +98,6 @@ public class TestService extends Service {
 
             mClientCallback = IServiceAidlCallback.Stub.asInterface(callback);
             initSpam();
-
         }
     };
 
