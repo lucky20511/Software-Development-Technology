@@ -43,10 +43,7 @@ Collection of tech talks, papers and web links on Distributed Systems, Scalabili
 * [Scale at Facebook](https://www.infoq.com/presentations/Scale-at-Facebook)
 * [Flight Lightning - Scaling Twitter core infrastructure](https://www.youtube.com/watch?v=6OvrFkLSoZ0)
 * [Scaling Instagram with Mike Krieger](https://www.youtube.com/watch?v=oNA2C1vC8FQ)
-* [GOTO 2014 • Scaling Pinterest • Marty Weiner](https://www.youtube.com/watch?v=jQNCuD_hxdQ)
-  \(
-  [InfoQ link](https://www.infoq.com/presentations/Pinterest)
-  \)
+* [GOTO 2014 • Scaling Pinterest • Marty Weiner](https://www.youtube.com/watch?v=jQNCuD_hxdQ)\([InfoQ link](https://www.infoq.com/presentations/Pinterest)\)
 * [Real-Time Delivery Architecture at Twitter](https://www.youtube.com/watch?v=J5auCY4ajK8)
 * [OSCON 2014: How Instagram.com Works; Pete Hunt](https://www.youtube.com/watch?v=VkTCL6Nqm6Y)
 * [Scaling the Data Infrastructure at Instagram](https://www.youtube.com/watch?v=1sPgogJlKWM)
@@ -91,25 +88,16 @@ Collection of tech talks, papers and web links on Distributed Systems, Scalabili
 
 #### Distributed Database/Large-Scale Storage
 
-* [Spanner: Google’s Globally-Distributed Database](https://www.usenix.org/conference/osdi12/technical-sessions/presentation/corbett)
-  \(
-  [Youtube link](https://www.youtube.com/watch?v=NthK17nbpYs)
-  \)
+* [Spanner: Google’s Globally-Distributed Database](https://www.usenix.org/conference/osdi12/technical-sessions/presentation/corbett)\([Youtube link](https://www.youtube.com/watch?v=NthK17nbpYs)\)
 * [Spanner - multi-version, globally- distributed, and synchronously-replicated database](https://www.youtube.com/watch?v=Q7pcMn0_tac)
-* [BigTable: A Distributed Structured Storage System](https://www.youtube.com/watch?v=2cXBNQClehA)
-  \(
-  [slides](http://static.googleusercontent.com/media/research.google.com/en//people/jeff/bigtable-uw-2005.pdf)
-  \)
+* [BigTable: A Distributed Structured Storage System](https://www.youtube.com/watch?v=2cXBNQClehA)\([slides](http://static.googleusercontent.com/media/research.google.com/en//people/jeff/bigtable-uw-2005.pdf)\)
 * [Large-Scale Low-Latency Storage for the Social Network - Data@Scale](https://www.youtube.com/watch?v=5RfFhMwRAic)
 * [Structured Data at Box: How We're Building for Scale](https://www.youtube.com/watch?v=KHrw0Xo8tYo)
 * [F4 - Photo Storage at Facebook](https://www.youtube.com/watch?v=34e_g-Ji_30)
 * [The Storage Technologies Behind Facebook Messages](https://www.youtube.com/watch?v=cSNGGAKJqwk)
 * [Cold Storage at Facebook](https://www.youtube.com/watch?v=FGZqToLuwU0)
 * [Taking Storage for a Ride with Uber](https://www.youtube.com/watch?v=Dg76cNaeB4s)
-* [Zen: Pinterest's Graph Storage Service - @Scale 2014 - Data](https://www.youtube.com/watch?v=yI0vHfgK6oI)
-  \(
-  [With Slides](https://www.infoq.com/presentations/zen-pinterest-graph-storage-service)
-  \)
+* [Zen: Pinterest's Graph Storage Service - @Scale 2014 - Data](https://www.youtube.com/watch?v=yI0vHfgK6oI)\([With Slides](https://www.infoq.com/presentations/zen-pinterest-graph-storage-service)\)
 * [Storage Systems at a Rapidly Scaling Startup with a Small Team - Data@Scale](https://www.youtube.com/watch?v=bLyv8zKa5DU)
 * [f4: Facebook's Warm BLOB Storage System](https://www.youtube.com/watch?v=imlP3lxwGgQ)
 
@@ -206,10 +194,7 @@ Collection of tech talks, papers and web links on Distributed Systems, Scalabili
 * [Infrastructure at Scale: Apache Kafka, Twitter Storm & Elastic Search \(ARC303\) \| AWS re:Invent 2013](https://www.youtube.com/watch?v=LpNbjXFPyZ0)
 * [Deepak Agarwal: Recommender Systems - The Art and Science of Matching Items to Users](https://www.youtube.com/watch?v=bRzOBGLCRbc)
 * [Lecture 12 -Analyzing Big Data with Twitter: Recommender Systems by Alpa Jain](https://www.youtube.com/watch?v=NSscbT7JwxY)
-* [Transactions across Datacenters](https://www.youtube.com/watch?v=srOgpXECblk)
-  \(
-  [Slides](http://snarfed.org/transactions_across_datacenters_io.html)
-  \)
+* [Transactions across Datacenters](https://www.youtube.com/watch?v=srOgpXECblk)\([Slides](http://snarfed.org/transactions_across_datacenters_io.html)\)
 * [Finding the Needle in the Haystack - or - Troubleshooting Distributed Systems](https://www.infoq.com/presentations/mondemand-troubleshoot-distributed-system)
 * [Finding the Needle in a Big Data Haystack](https://www.infoq.com/presentations/search-hadoop-data-hub)
 * [Large scale image processing on the fly in 25ms with Google's first Network Engineer](https://www.youtube.com/watch?v=H_9cH1tiigs)
