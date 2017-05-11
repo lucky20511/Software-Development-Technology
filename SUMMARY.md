@@ -10,6 +10,7 @@
 
 * [Communication Methods](android/communication-methods.md)
 * [Binder to Service](android/binder-to-service.md)
+* [AIDL](android/aidl.md)
 
 ## Reliable Data Transmission
 
