@@ -3,13 +3,8 @@
 ## System Architecture Design
 
 * [System Design Process](system-architecture-design/system-design-process.md)
-
-## System Design
-
-* [System Design Process](system-design-process.md)
+* [Scalable Software Architecture Materials](system-architecture-design/scalable-software-architecture-materials.md)
 * [Introduction](README.md)
-* [Scalable Software Architecture Materials](scalable-software-architecture-materials.md)
-* Scalable Software Architecture Materials
 
 ## Android
 
