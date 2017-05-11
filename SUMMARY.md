@@ -12,6 +12,7 @@
 * [Binder to Service](android/binder-to-service.md)
 * [AIDL](android/aidl.md)
 * [Messenger](android/messenger.md)
+* [Intent IPC](android/intent-ipc.md)
 
 ## Reliable Data Transmission
 
