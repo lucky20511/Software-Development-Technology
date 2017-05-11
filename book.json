@@ -1,4 +1,4 @@
 {
-    "plugins": ["theme-faq", "-highlight", "lilypond-highlight"]
+    "plugins": ["theme-faq", "-highlight", "sunlight-highlighter"]
 }
 
