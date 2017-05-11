@@ -66,7 +66,7 @@ public class TestService extends Service {
     }
 
     public void initSpam(){
-        for(int i=0;i<10;i++) {
+        for(int i = 0; i < 10; i++) {
             TimerTask task = new TimerTask() {
                 @Override
                 public void run() {
