@@ -1,4 +1,4 @@
-From: [https://github.com/socketio/socket.io](https://github.com/socketio/socket.io) 
+From: [https://github.com/socketio/socket.io](https://github.com/socketio/socket.io)
 
 # socket.io
 
@@ -56,59 +56,7 @@ Any serializable data structures can be emitted, including:
 Sample code:
 
 ```
-io
-.
-on
-(
-'
-connection
-'
-, 
-function
-(
-socket
-){
-  
-socket
-.
-emit
-(
-'
-request
-'
-, 
-/* */
-); 
-//
- emit an event to the socket
-io
-.
-emit
-(
-'
-broadcast
-'
-, 
-/* */
-); 
-//
- emit an event to all connected sockets
-socket
-.
-on
-(
-'
-reply
-'
-, 
-function
-(){ 
-/* */
- }); 
-//
- listen to the event
 
-});
 ```
 
 #### Cross-browser
@@ -140,106 +88,13 @@ npm install socket.io --save
 The following example attaches socket.io to a plain Node.JS HTTP server listening on port`3000`.
 
 ```
-var
- server 
-=
-require
-(
-'
-http
-'
-).
-createServer
-();
 
-var
- io 
-=
-require
-(
-'
-socket.io
-'
-)(server);
-
-io
-.
-on
-(
-'
-connection
-'
-, 
-function
-(
-client
-){
-  
-client
-.
-on
-(
-'
-event
-'
-, 
-function
-(
-data
-){});
-  
-client
-.
-on
-(
-'
-disconnect
-'
-, 
-function
-(){});
-});
-
-server
-.
-listen
-(
-3000
-);
 ```
 
 ### Standalone
 
 ```
-var
- io 
-=
-require
-(
-'
-socket.io
-'
-)();
 
-io
-.
-on
-(
-'
-connection
-'
-, 
-function
-(
-client
-){});
-
-io
-.
-listen
-(
-3000
-);
 ```
 
 ### In conjunction with Express
@@ -247,57 +102,7 @@ listen
 Starting with**3.0**, express applications have become request handler functions that you pass to`http`or`httpServer`instances. You need to pass the`Server`to`socket.io`, and not the express application function. Also make sure to call`.listen`on the`server`, not the`app`.
 
 ```
-var
- app 
-=
-require
-(
-'
-express
-'
-)();
 
-var
- server 
-=
-require
-(
-'
-http
-'
-).
-createServer
-(app);
-
-var
- io 
-=
-require
-(
-'
-socket.io
-'
-)(server);
-
-io
-.
-on
-(
-'
-connection
-'
-, 
-function
-(){ 
-/* … */
- });
-
-server
-.
-listen
-(
-3000
-);
 ```
 
 ### In conjunction with Koa
@@ -305,61 +110,7 @@ listen
 Like Express.JS, Koa works by exposing an application as a request handler function, but only by calling the`callback`method.
 
 ```
-var
- app 
-=
-require
-(
-'
-koa
-'
-)();
 
-var
- server 
-=
-require
-(
-'
-http
-'
-).
-createServer
-(
-app
-.
-callback
-());
-
-var
- io 
-=
-require
-(
-'
-socket.io
-'
-)(server);
-
-io
-.
-on
-(
-'
-connection
-'
-, 
-function
-(){ 
-/* … */
- });
-
-server
-.
-listen
-(
-3000
-);
 ```
 
 ## Documentation
@@ -374,14 +125,12 @@ To see the output from all of Socket.IO's debugging scopes you can use:
 
 ```
 DEBUG=socket.io* node myapp
-
 ```
 
 ## Testing
 
 ```
 npm test
-
 ```
 
 This runs the`gulp`task`test`. By default the test will be run with the source code in`lib`directory.
