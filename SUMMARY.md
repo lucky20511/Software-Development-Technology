@@ -49,7 +49,5 @@
 
 ## Chrome Extension
 
-* Easy Steps to write a Chrome Extension
-
 ## Back-End Development
 
