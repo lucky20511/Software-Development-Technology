@@ -47,5 +47,7 @@
 
 * [MySQL on OSX](installation/mysql-on-osx.md)
 
+## Chrome Extension
+
 ## Back-End Development
 
