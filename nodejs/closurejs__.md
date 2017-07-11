@@ -26,5 +26,17 @@ A Classic jQuery Example of Closures:
 
 ### Closures’ Rules and Side Effects
 
+Closures have access to the outer function’s variable even after the outer function returns:
+
+One of the most important and ticklish features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned. Yep, you read that correctly. When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. This means that even after the outer function has returned, the inner function still has access to the outer function’s variables. Therefore, you can call the inner function later in your program. This example demonstrates:
+
+```
+1
+```
+
+Closures store references to the outer function’s variables; they do not store the actual value.  Closures get more interesting when the value of the outer function’s variable changes before the closure is called. And this powerful feature can be harnessed in creative ways, such as this private variables example first demonstrated by Douglas Crockford: 
+
+
+
 
 
