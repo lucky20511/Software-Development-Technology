@@ -15,14 +15,14 @@ You create a closure by adding a function inside another function.
 ```
 function showName (firstName, lastName) { 
 ​    var nameIntro = "Your name is ";
-   
+
     // this inner function has access to the outer function's variables, including the parameter​
-​    function makeFullName () {         
-​       return nameIntro + firstName + " " + lastName;     
+​    function makeFullName () { 
+​       return nameIntro + firstName + " " + lastName; 
     }
 ​    return makeFullName (); 
 } 
-showName ("Michael", "Jackson"); // Your name is Michael Jackson 
+showName("Michael", "Jackson"); // Your name is Michael Jackson
 ```
 
 Closures are used extensively in Node.js; they are workhorses in Node.js’ asynchronous, non-blocking architecture. Closures are also frequently used in jQuery and just about every piece of JavaScript code you read.
