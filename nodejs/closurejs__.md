@@ -20,3 +20,11 @@ Closures are used extensively in Node.js; they are workhorses in Node.js’ asyn
 
 A Classic jQuery Example of Closures:
 
+```
+1
+```
+
+### Closures’ Rules and Side Effects
+
+
+
