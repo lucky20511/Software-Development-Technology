@@ -49,6 +49,7 @@ The reason this happened was because, as we have discussed in the previous examp
 To fix this side effect \(bug\) in closures, you can use an Immediately Invoked Function Expression \(IIFE\), such as the following:
 
 ```
+
 function celebrityIDCreator (theCelebrities) {
     var i;
     var uniqueID = 100;
@@ -62,12 +63,10 @@ function celebrityIDCreator (theCelebrities) {
     return theCelebrities;
 }
 var actionCelebs = [{name:"Stallone", id:0}, {name:"Cruise", id:0}, {name:"Willis", id:0}];
-
 var createIdForActionCelebs = celebrityIDCreator (actionCelebs);
 
 var stalloneID = createIdForActionCelebs [0];
 console.log(stalloneID.id); // 100​
-
 var cruiseID = createIdForActionCelebs [1]; console.log(cruiseID.id); // 101
 ```
 
