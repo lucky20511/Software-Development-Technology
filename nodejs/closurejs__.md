@@ -21,7 +21,12 @@ Closures are used extensively in Node.js; they are workhorses in Node.js’ asyn
 A Classic jQuery Example of Closures:
 
 ```
-1
+$(function() {
+​    var selections = []; 
+    $(".niners").click(function() { // this closure has access to the selections variable​
+        selections.push (this.prop("name")); // update the selections variable in the outer function's scope​
+    });
+});
 ```
 
 ### Closures’ Rules and Side Effects
