@@ -20,7 +20,7 @@ function showName (firstName, lastName) { 
 ​    function makeFullName () { 
 ​       return nameIntro + firstName + " " + lastName; 
     }
-​    return makeFullName (); 
+​    return makeFullName(); 
 } 
 showName("Michael", "Jackson"); // Your name is Michael Jackson
 ```
