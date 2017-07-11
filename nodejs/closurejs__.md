@@ -34,9 +34,11 @@ One of the most important and ticklish features with closures is that the inner 
 1
 ```
 
+
+
 Closures Gone Away
 
- Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
+Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 2
 
