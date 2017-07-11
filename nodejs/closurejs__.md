@@ -50,8 +50,7 @@ return uniqueID + i;
 return theCelebrities;
 }
 ​var actionCelebs = [{name:"Stallone", id:0}, {name:"Cruise", id:0}, {name:"Willis", id:0}];
-​var createIdForActionCelebs = celebrityIDCreator(actionCelebs);
-var stalloneID = createIdForActionCelebs[0];  console.log(stalloneID.id()); // 103
+
 ```
 
 In the preceding example, by the time the anonymous functions are called, the value of i is 3 \(the length of the array and then it increments\). The number 3 was added to the uniqueID to create 103 for ALL the celebritiesID. So every position in the returned array get id = 103, instead of the intended 100, 101, 102.
