@@ -10,13 +10,11 @@ The inner function has access not only to the outer function’s variables, but 
 
 You create a closure by adding a function inside another function.
 
-### A Basic Example of Closures in JavaScript: 
+A Basic Example of Closures in JavaScript:
 
 ```
 
 ```
-
-
 
 
 
