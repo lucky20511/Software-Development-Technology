@@ -39,7 +39,6 @@ One of the most important and ticklish features with closures is that the inner 
 Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 ```
-// This example is explained in detail below (just after this code box).​
 function celebrityIDCreator (theCelebrities) {
 var i;
 var uniqueID = 100;
