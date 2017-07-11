@@ -30,11 +30,10 @@
 * [Object-Oriented \(2\)](nodejs/object-oriented-2.md)
 * [Object-Oriented \(3\) Prototype](nodejs/object-oriented-3-prototype.md)
 * [Object-Oriented \(4\) Inheritance](nodejs/object-oriented-4-inheritance.md)
-* [Closure](nodejs/closure.md)
+* [Closure](nodejs/closure_js.md)
 * [Asynchronous](nodejs/asynchronous.md)
 * [Avoiding Callback Hell in Node.js](nodejs/avoiding-callback-hell-in-nodejs.md)
 * [Node.js Callback Simple Example](nodejs/nodejs-callback-simple-example.md)
-* [Socket Io](nodejs/socket-io.md)
 
 ## ELK
 
