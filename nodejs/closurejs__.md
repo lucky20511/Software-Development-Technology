@@ -16,9 +16,5 @@ You create a closure by adding a function inside another function.
 
 ```
 
-Closures are used extensively in Node.js; they are workhorses in Node.js’ asynchronous, non-blocking architecture. Closures are also frequently used in jQuery and just about every piece of JavaScript code you read.
-
-A Classic jQuery Example of Closures: 
-
 
 
