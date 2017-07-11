@@ -52,6 +52,16 @@ To fix this side effect \(bug\) in closures, you can use an Immediately Invoked 
 function celebrityIDCreator (theCelebrities) {
     var i;
     var uniqueID = 100;
+    for (i = 0; i < theCelebrities.length; i++) {
+        theCelebrities[i]["id"] = function (j)  {
+            return function () {
+                return uniqueID + j;
+            } () 
+        } (i); 
+    }
+​
+    return theCelebrities;
+}
 ```
 
 
