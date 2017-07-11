@@ -2,10 +2,10 @@
 
 From: [http://javascriptissexy.com/understand-javascript-closures-with-ease/](http://javascriptissexy.com/understand-javascript-closures-with-ease/)
 
-**What is a closure?**  
+What is a closure?  
 A closure is an inner function that has access to the outer \(enclosing\) function’s variables—scope chain. The closure has three scope chains: it has access to its own scope \(variables defined between its curly brackets\), it has access to the outer function’s variables, and it has access to the global variables.
 
-The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s\_arguments\_object, however, even though it can call the outer function’s parameters directly.
+The inner function has access not only to the outer function’s variables, but also to the outer function’s parameters. Note that the inner function cannot call the outer function’s arguments object, however, even though it can call the outer function’s parameters directly.
 
 You create a closure by adding a function inside another function.
 
@@ -89,7 +89,7 @@ $(function() {
    mjID.getID(); // 567: It returns the updated celebrityId variable
    ```
 2. **Closures Gone Awry**
-                Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
+                   Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 ```
    // This example is explained in detail below (just after this code box).​
@@ -117,8 +117,6 @@ In the preceding example, by the time the anonymous functions are called, the va
 The reason this happened was because, as we have discussed in the previous example, the closure \(the anonymous function in this example\) has access to the outer function’s variables by reference, not by value. So just as the previous example showed that we can access the updated variable with the closure, this example similarly accessed the i variable when it was changed, since the outer function runs the entire for loop and returns the last value of i, which is 103.
 
 To fix this side effect \(bug\) in closures, you can use an**Immediately Invoked Function Expression**\(IIFE\), such as the following:
-
-
 
 ```
   function celebrityIDCreator (theCelebrities) {
