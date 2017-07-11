@@ -22,5 +22,3 @@ A Classic jQuery Example of Closures: 
 
 
 
-
-
