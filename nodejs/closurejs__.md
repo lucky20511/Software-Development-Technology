@@ -54,5 +54,7 @@ The reason this happened was because, as we have discussed in the previous examp
 
 To fix this side effect \(bug\) in closures, you can use an Immediately Invoked Function Expression \(IIFE\), such as the following:
 
+1
 
+1
 
