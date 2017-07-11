@@ -34,7 +34,7 @@ One of the most important and ticklish features with closures is that the inner 
 1
 ```
 
-Closures Gone Away
+### Closures Gone Away
 
 Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
@@ -47,8 +47,6 @@ In the preceding example, by the time the anonymous functions are called, the va
 The reason this happened was because, as we have discussed in the previous example, the closure \(the anonymous function in this example\) has access to the outer function’s variables by reference, not by value. So just as the previous example showed that we can access the updated variable with the closure, this example similarly accessed the i variable when it was changed, since the outer function runs the entire for loop and returns the last value of i, which is 103.
 
 To fix this side effect \(bug\) in closures, you can use an Immediately Invoked Function Expression \(IIFE\), such as the following:
-
-function celebrityIDCreator \(theCelebrities\) {
 
 ```
 function celebrityIDCreator (theCelebrities) {
