@@ -1,4 +1,4 @@
-From: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object\_prototypes
+From: [https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object\_prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
 
 ## A prototype-based language? {#A_prototype-based_language}
 
@@ -8,21 +8,21 @@ Well, to be exact, the properties and methods are defined on the`prototype`prope
 
 In classic OOP, classes are defined, then when object instances are created all the properties and methods defined on the class are copied over to the instance. In JavaScript, they are not copied over — instead, a link is made between the object instance and its prototype \(its`__proto__`property, which is derived from the`prototype`property on the constructor\), and the properties and methods are found by walking up the chain of prototypes.
 
-**Note:**It's important to understand that there is a distinction between an object's prototype \(which is available via[`Object.getPrototypeOf(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), or via the deprecated[`__proto__`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)property\) and the`prototype`property on constructor functions. The former is the property on each instance, and the latter is the property on the constructor. That is,`Object.getPrototypeOf(new Foobar())`refers to the same object as`Foobar.prototype`.
+**Note:**It's important to understand that there is a distinction between an object's prototype \(which is available via[`Object.getPrototypeOf(obj)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), or via the deprecated[`__proto__`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/proto)property\) and the`prototype`property on constructor functions. The former is the property on each instance, and the latter is the property on the constructor. That is,`Object.getPrototypeOf(new Foobar())`refers to the same object as`Foobar.prototype`.
 
 Let's look at an example to make this a bit clearer.
 
 ## Understanding prototype objects {#Understanding_prototype_objects}
 
-Let's go back to the example in which we finished writing our`Person()`constructor — load the example in your browser. If you don't still have it from working through the last article, use our[oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)example \(see also the[source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)\).
+Let's go back to the example in which we finished writing our`Person()`constructor — load the example in your browser. If you don't still have it from working through the last article, use our[oojs-class-further-exercises.html](http://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises.html)example \(see also the [source code](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)\).
 
 In this example, we have defined a constructor function, like so:
 
 ```
 function Person(first, last, age, gender, interests) {
-  
+
   // property and method definitions
-  
+
 }
 ```
 
@@ -48,8 +48,8 @@ person1.valueOf()
 
 This method simply returns the value of the object it is called on — try it and see! In this case, what happens is:
 
-* The browser initially checks to see if the`person1 `object has a `valueOf()`method available on it.
-* It doesn't, so the browser then checks to see if the `person1 `object's prototype object\(`Person`\) has a`valueOf()`method available on it.
+* The browser initially checks to see if the`person1`object has a `valueOf()`method available on it.
+* It doesn't, so the browser then checks to see if the `person1`object's prototype object\(`Person`\) has a`valueOf()`method available on it.
 * It doesn't either, so the browser then checks to see if the`Person()`constructor's prototype object\(`Object`\) has a`valueOf()`method available on it. It does, so it is called, and all is good!
 
 **Note**: We want to reiterate that the methods and properties are**not**copied from one object to another in the prototype chain — they are accessed by walking up the chain as described above.
@@ -115,6 +115,7 @@ This will return the`person1`object.
 Every constructor function has a prototype property whose value is an object containing a[`constructor`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor)property. This constructor property points to the original constructor function. As you will see in the next section that properties defined on the Person.prototype property \(or in general on a constructor function's prototype property, which is an object, as mentioned in the above section\) become available to all the instance objects created using the Person\(\) constructor. Hence, the constructor property is also available to both person1 and person2 objects.
 
 1. For example, try these commands in the console:
+
    ```
    person1.constructor
    person2.constructor
@@ -125,9 +126,11 @@ Every constructor function has a prototype property whose value is an object con
    A clever trick is that you can put parentheses onto the end of the`constructor`property \(containing any required parameters\) to create another object instance from that constructor. The constructor is a function after all, so can be invoked using parentheses; you just need to include the`new`keyword to specify that you want to use the function as a constructor.
 
 2. Try this in the console:
+
    ```
    var person3 = new person1.constructor('Karen', 'Stephenson', 26, 'female', ['playing drums', 'mountain climbing']);
    ```
+
 3. Now try accessing your new object's features, for example:
    ```
    person3.name.first
@@ -149,7 +152,7 @@ Try this, for example:
 person1.constructor.name
 ```
 
-**Note**: The value of`constructor.name`can change \(due to prototypical inheritance, binding, preprocessors, transpilers, etc.\), so for more complex examples you'll want to use the[`instanceof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)operator instead.
+**Note**: The value of`constructor.name`can change \(due to prototypical inheritance, binding, preprocessors, transpilers, etc.\), so for more complex examples you'll want to use the[`instanceof`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/instanceof)operator instead.
 
 ## Modifying prototypes {#Modifying_prototypes}
 
@@ -168,7 +171,7 @@ Let's have a look at an example of modifying the`prototype`property of a constru
 
 You should get an alert message displayed, featuring the person's name as defined inside the constructor. This is really useful, but what is even more useful is that the whole inheritance chain has updated dynamically, automatically making this new method available on all object instances derived from the constructor.
 
-Think about this for a moment. In our code we define the constructor, then we create an instance object from the constructor,_then_we add a new method to the constructor's prototype:
+Think about this for a moment. In our code we define the constructor, then we create an instance object from the constructor,\_then\_we add a new method to the constructor's prototype:
 
 ```
 function Person(first, last, age, gender, interests) {
@@ -184,7 +187,7 @@ Person.prototype.farewell = function() {
 };
 ```
 
-But the`farewell()`method is_still_available on the`person1`object instance — its available functionality has been automatically updated. This proves what we said earlier about the prototype chain, and the browser looking upwards in the chain to find methods that aren't defined on the object instance itself rather than those methods being copied to the instance. This provides a very powerful, extensible system of functionality.
+But the`farewell()`method is\_still\_available on the`person1`object instance — its available functionality has been automatically updated. This proves what we said earlier about the prototype chain, and the browser looking upwards in the chain to find methods that aren't defined on the object instance itself rather than those methods being copied to the instance. This provides a very powerful, extensible system of functionality.
 
 **Note**: If you are having trouble getting this example to work, have a look at our[oojs-class-prototype.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/advanced/oojs-class-prototype.html)example \(see it[running live](http://mdn.github.io/learning-area/javascript/oojs/advanced/oojs-class-prototype.html)also\).
 
