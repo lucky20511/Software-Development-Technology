@@ -89,7 +89,7 @@ $(function() {
    mjID.getID(); // 567: It returns the updated celebrityId variable
    ```
 2. **Closures Gone Awry**
-       Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
+          Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 ```
    // This example is explained in detail below (just after this code box).​
