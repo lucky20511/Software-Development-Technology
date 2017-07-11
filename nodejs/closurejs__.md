@@ -14,8 +14,6 @@ You create a closure by adding a function inside another function.
 
 ```
 function showName (firstName, lastName) { 
-    var nameIntro = "Your name is ";
-
     
 ```
 
