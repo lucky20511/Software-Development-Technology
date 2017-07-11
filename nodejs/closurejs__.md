@@ -31,7 +31,20 @@ A Classic jQuery Example of Closures:
 One of the most important and ticklish features with closures is that the inner function still has access to the outer function’s variables even after the outer function has returned. Yep, you read that correctly. When functions in JavaScript execute, they use the same scope chain that was in effect when they were created. This means that even after the outer function has returned, the inner function still has access to the outer function’s variables. Therefore, you can call the inner function later in your program. This example demonstrates:
 
 ```
-1
+function celebrityName (firstName) {
+    var nameIntro = "This celebrity is ";
+    // this inner function has access to the outer function's variables, including the parameter​
+   function lastName (theLastName) {
+        return nameIntro + firstName + " " + theLastName;
+    }
+    return lastName;
+}
+​
+​var mjName = celebrityName("Michael"); // At this juncture, the celebrityName outer function has returned.​
+​
+​// The closure(lastName) is called here after the outer function has returned above​
+​// Yet, the closure still has access to the outer function's variables and parameter​
+mjName("Jackson"); // This celebrity is Michael Jackson 
 ```
 
 #### 2.Closures store references to the outer function’s variables
