@@ -67,7 +67,6 @@ var createIdForActionCelebs = celebrityIDCreator (actionCelebs);
 var stalloneID = createIdForActionCelebs[0];
 console.log(stalloneID.id);
 
- console.log(cruiseID.id);
 ```
 
 
