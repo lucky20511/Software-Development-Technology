@@ -42,7 +42,7 @@ Closures store references to the outer function’s variables; they do not store
 
 Closures Gone Away
 
- Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
+Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 ```
 1
