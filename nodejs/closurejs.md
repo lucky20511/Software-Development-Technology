@@ -89,7 +89,7 @@ $(function() {
    mjID.getID(); // 567: It returns the updated celebrityId variable
    ```
 2. **Closures Gone Awry**
-             Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
+                Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
 ```
    // This example is explained in detail below (just after this code box).​
@@ -118,8 +118,10 @@ The reason this happened was because, as we have discussed in the previous examp
 
 To fix this side effect \(bug\) in closures, you can use an**Immediately Invoked Function Expression**\(IIFE\), such as the following:
 
+
+
 ```
-   function celebrityIDCreator (theCelebrities) {
+  function celebrityIDCreator (theCelebrities) {
        var i;
        var uniqueID = 100;
        for (i = 0; i < theCelebrities.length; i++) {
