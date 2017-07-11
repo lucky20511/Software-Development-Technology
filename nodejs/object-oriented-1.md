@@ -1,10 +1,10 @@
-From: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics
+From: [https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Basics)
 
 ## Object basics {#Object_basics}
 
 An object is a collection of related data and/or functionality \(which usually consists of several variables and functions — which are called properties and methods when they are inside objects.\) Let's work through an example to show us what they look like.
 
-To begin with, make a local copy of our[oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html)file. This contains very little — a[`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)element for us to write our source code into, an[`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)element for us to enter sample instructions into when the page is rendered, a few variable definitions, and a function that outputs any code entered into the input into a[`<p>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)element. We'll use this as a basis for exploring basic object syntax.
+To begin with, make a local copy of our [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html) file. This contains very little — a[`<script>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)element for us to write our source code into, an[`<input>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input)element for us to enter sample instructions into when the page is rendered, a few variable definitions, and a function that outputs any code entered into the input into a[`<p>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)element. We'll use this as a basis for exploring basic object syntax.
 
 As with many things in JavaScript, creating an object often begins with defining and initializing a variable. Try entering the following below the JavaScript code that's already in your file, then saving and refreshing:
 
@@ -47,9 +47,7 @@ person.greeting()
 
 You have now got some data and functionality inside your object, and are now able to access them with some nice simple syntax!
 
-
-
-So what is going on here? Well, an object is made up of multiple members, each of which has a name \(e.g.`name`and`age`above\), and a value \(e.g.`['Bob', 'Smith']`and`32`\). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
+So what is going on here? Well, an object is made up of multiple members, each of which has a name \(e.g.`name`and`age`above\), and a value \(e.g.`['Bob', 'Smith']`and`32`\). Each name/value pair must be separated by a comma, and the name and value in each case are separated by a colon. The syntax always follows this pattern:
 
 ```
 var objectName = {
@@ -190,7 +188,7 @@ Now try saving and refreshing, and entering the following into your text input:
 person.height
 ```
 
-Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
+Adding a property to an object using the method above isn't possible with dot notation, which can only accept a literal member name, not a variable value pointing to a name.
 
 ## What is "this"? {#What_is_this}
 
@@ -260,9 +258,4 @@ Again, we'll look at constructors in a later article.
 ## Summary {#Summary}
 
 Congratulations, you've reached the end of our first JS objects article — you should now have a good idea of how to work with objects in JavaScript — including creating your own simple objects. You should also appreciate that objects are very useful as structures for storing related data and functionality — if you tried to keep track of all the properties and methods in our`person`object as separate variables and functions, it would be inefficient and frustrating, and we'd run the risk of clashing with other variables and functions that have the same names. Objects let us keep the information safely locked away in their own package, out of harm's way.
-
-  
-
-
-
 
