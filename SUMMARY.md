@@ -26,6 +26,10 @@
 
 ## Node.js
 
+* [Object-Oriented \(1\)](nodejs/object-oriented-1.md)
+* Object-Oriented \(2\)
+* Object-Oriented \(3\) Prototype
+* Object-Oriented \(4\) Inheritance
 * [Closure](nodejs/closure.md)
 * [Asynchronous](nodejs/asynchronous.md)
 * [Avoiding Callback Hell in Node.js](nodejs/avoiding-callback-hell-in-nodejs.md)
