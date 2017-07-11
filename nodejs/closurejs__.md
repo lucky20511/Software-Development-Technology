@@ -48,35 +48,47 @@ The reason this happened was because, as we have discussed in the previous examp
 
 To fix this side effect \(bug\) in closures, you can use an Immediately Invoked Function Expression \(IIFE\), such as the following:
 
-var i;
+function celebrityIDCreator \(theCelebrities\) {
 
-var uniqueID = 100;
+    var i;
 
-for \(i = 0; i &lt; theCelebrities.length; i++\) {
+    var uniqueID = 100;
 
-theCelebrities\[i\]\["id"\] = function \(j\) { // the j parametric variable is the i passed in on invocation of this IIFE​
+    for \(i = 0; i &lt; theCelebrities.length; i++\) {
 
-return function \(\) {
+        theCelebrities\[i\]\["id"\] = function \(j\)  {
 
-return uniqueID + j; // each iteration of the for loop passes the current value of i into this IIFE and it saves the correct value to the array​
+            return function \(\) {
 
-} \(\) // BY adding \(\) at the end of this function, we are executing it immediately and returning just the value of uniqueID + j, instead of returning a function.​
+                return uniqueID + j;
 
-} \(i\); // immediately invoke the function passing the i variable as a parameter​
+            } \(\) 
 
-}
+        } \(i\); 
 
-return theCelebrities;
+    }
 
-}
+​
+
+    return theCelebrities;
+
+}   
+
+​
 
 ​var actionCelebs = \[{name:"Stallone", id:0}, {name:"Cruise", id:0}, {name:"Willis", id:0}\];
 
+​
+
 var createIdForActionCelebs = celebrityIDCreator \(actionCelebs\);
+
+
 
 ​var stalloneID = createIdForActionCelebs \[0\];
 
-console.log\(stalloneID.id\); // 100​
+ console.log\(stalloneID.id\); 
 
-​var cruiseID = createIdForActionCelebs \[1\]; console.log\(cruiseID.id\); // 101
+​
+
+​var cruiseID = createIdForActionCelebs \[1\]; console.log\(cruiseID.id\);
 
