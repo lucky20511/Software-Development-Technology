@@ -28,7 +28,7 @@
 
 * [Object-Oriented \(1\)](nodejs/object-oriented-1.md)
 * [Object-Oriented \(2\)](nodejs/object-oriented-2.md)
-* Object-Oriented \(3\) Prototype
+* [Object-Oriented \(3\) Prototype](nodejs/object-oriented-3-prototype.md)
 * Object-Oriented \(4\) Inheritance
 * [Closure](nodejs/closure.md)
 * [Asynchronous](nodejs/asynchronous.md)
