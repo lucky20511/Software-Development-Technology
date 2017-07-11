@@ -52,8 +52,8 @@ function celebrityIDCreator \(theCelebrities\) {
 
 ```
 function celebrityIDCreator (theCelebrities) {
-var i;
-
+    var i;
+    var uniqueID = 100;
 ```
 
 
