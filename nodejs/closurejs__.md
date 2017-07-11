@@ -56,10 +56,10 @@ function celebrityID () {
     }
 }
 ​
-​var mjID = celebrityID (); // At this juncture, the celebrityID outer function has returned.​
+​var mjID = celebrityID(); // At this juncture, the celebrityID outer function has returned.​
 mjID.getID(); // 999​
 mjID.setID(567); // Changes the outer function's variable​
-mjID.getID(); // 567: It returns the updated celebrityId variable 
+mjID.getID(); // 567: It returns the updated celebrityId variable
 ```
 
 #### 3.Closures Gone Away
