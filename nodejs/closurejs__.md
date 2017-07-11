@@ -36,17 +36,17 @@ One of the most important and ticklish features with closures is that the inner 
 
 Closures store references to the outer function’s variables; they do not store the actual value.  Closures get more interesting when the value of the outer function’s variable changes before the closure is called. And this powerful feature can be harnessed in creative ways, such as this private variables example first demonstrated by Douglas Crockford:
 
-2
+```
+1
+```
 
-2
+Closures Gone Away
 
-2
+ Because closures have access to the updated values of the outer function’s variables, they can also lead to bugs when the outer function’s variable changes with a for loop. Thus:
 
-2
-
-2
-
-2
+```
+1
+```
 
 2
 
