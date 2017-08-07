@@ -19,6 +19,7 @@
 * [Android HTTP Server](android/android-http-server.md)
 * [Implicit intent v.s BroadcastReceiver](android/implicit-intent-vs-broadcastreceiver.md)
 * [IDL](android/idl.md)
+* [Looper, Handler and Thread](android/looper-handler-and-thread.md)
 
 ## Reliable Data Transmission
 
@@ -56,6 +57,4 @@
 ## Back-End Development
 
 * [WebSocket](Back-End Development/WebSocket.md)
-
-
 
