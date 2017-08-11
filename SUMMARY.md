@@ -25,7 +25,7 @@
 
 * [Apache Kafka](reliability-data-transmission/apache-kafka.md)
 
-## Node.js
+## Javascript
 
 * [Object-Oriented \(1\)](nodejs/object-oriented-1.md)
 * [Object-Oriented \(2\)](nodejs/object-oriented-2.md)
