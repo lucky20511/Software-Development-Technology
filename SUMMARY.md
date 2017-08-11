@@ -27,14 +27,14 @@
 
 ## Javascript
 
-* [Object-Oriented \(1\)](nodejs/object-oriented-1.md)
-* [Object-Oriented \(2\)](nodejs/object-oriented-2.md)
-* [Object-Oriented \(3\) Prototype](nodejs/object-oriented-3-prototype.md)
-* [Object-Oriented \(4\) Inheritance](nodejs/object-oriented-4-inheritance.md)
-* [Closure](/nodejs/closure.md)
-* [Asynchronous](nodejs/asynchronous.md)
-* [Avoiding Callback Hell in Node.js](nodejs/avoiding-callback-hell-in-nodejs.md)
-* [Node.js Callback Simple Example](nodejs/nodejs-callback-simple-example.md)
+* [Object-Oriented \(1\)](/javascript/object-oriented-1.md)
+* [Object-Oriented \(2\)](/javascript/object-oriented-2.md)
+* [Object-Oriented \(3\) Prototype](/javascript/object-oriented-3-prototype.md)
+* [Object-Oriented \(4\) Inheritance](/javascript/object-oriented-4-inheritance.md)
+* [Closure](/javascript/closure.md)
+* [Asynchronous](/javascript/asynchronous.md)
+* [Avoiding Callback Hell in Node.js](/javascript/avoiding-callback-hell-in-nodejs.md)
+* [Node.js Callback Simple Example](/javascript/nodejs-callback-simple-example.md)
 
 ## ELK
 
