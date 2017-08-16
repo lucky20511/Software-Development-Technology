@@ -58,3 +58,7 @@
 
 * [WebSocket](Back-End Development/WebSocket.md)
 
+## Deployment
+
+* Amazon EC2
+
