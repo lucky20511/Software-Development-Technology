@@ -4,7 +4,7 @@
 
 * What is Auto-Scaling? [http://docs.aws.amazon.com/autoscaling/latest/userguide/WhatIsAutoScaling.html](http://docs.aws.amazon.com/autoscaling/latest/userguide/WhatIsAutoScaling.html)
 
-* What is ELB? http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html
+* What is ELB? [http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html](http://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/what-is-load-balancing.html)
 
 * 
 
