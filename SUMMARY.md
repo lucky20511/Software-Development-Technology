@@ -5,7 +5,7 @@
 * [Introduction](README.md)
 * [System Design Process](system-architecture-design/system-design-process.md)
 * [Scalable Software Architecture Materials](system-architecture-design/scalable-software-architecture-materials.md)
-* [Consistency of Casandra](consistency-of-cansandra.md)
+* [Consistency of Cassandra](consistency-of-cansandra.md)
 
 ## Front-End Development
 
