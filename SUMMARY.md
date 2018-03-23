@@ -8,6 +8,7 @@
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
+* [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 
 ## Front-End Development
 
