@@ -6,6 +6,7 @@
 * [System Design Process](system-architecture-design/system-design-process.md)
 * [Scalable Software Architecture Materials](system-architecture-design/scalable-software-architecture-materials.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
+* [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
 
 ## Front-End Development
 
