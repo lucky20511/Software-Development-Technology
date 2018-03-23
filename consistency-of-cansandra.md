@@ -1,6 +1,4 @@
-# Consistency of Casandra
-
-
+# Consistency of Cassandra
 
 # How are consistent read and write operations handled? {#ariaid-title1}
 
