@@ -11,6 +11,7 @@
 * [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 * [Cache Replication](cache-replication.md)
 * [Protocols](protocols.md)
+* [Three Cache Update Methods](three-cache-update-methods.md)
 
 ## Front-End Development
 
