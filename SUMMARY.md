@@ -13,7 +13,13 @@
 * [Protocols](protocols.md)
 * [Three Cache Update Methods](three-cache-update-methods.md)
 
-## Front-End Development
+## Reliable Data Transmission and Streaming
+
+* [Apache Kafka](reliability-data-transmission/apache-kafka.md)
+
+## Protocols
+
+* [WebSocket](Back-End Development/WebSocket.md)
 
 ## Android
 
@@ -27,10 +33,6 @@
 * [Implicit intent v.s BroadcastReceiver](android/implicit-intent-vs-broadcastreceiver.md)
 * [IDL](android/idl.md)
 * [Looper, Handler and Thread](android/looper-handler-and-thread.md)
-
-## Reliable Data Transmission
-
-* [Apache Kafka](reliability-data-transmission/apache-kafka.md)
 
 ## Javascript
 
@@ -61,10 +63,6 @@
 * [MySQL on OSX](installation/mysql-on-osx.md)
 
 ## Chrome Extension
-
-## Back-End Development
-
-* [WebSocket](Back-End Development/WebSocket.md)
 
 ## Deployment
 
