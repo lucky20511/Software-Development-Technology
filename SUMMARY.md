@@ -8,17 +8,17 @@
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
-* [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 * [Cache Replication](cache-replication.md)
-* [Protocols](protocols.md)
-* [Three Cache Update Methods](three-cache-update-methods.md)
+* [3 Cache Update Methods](three-cache-update-methods.md)
 
-## Reliable Data Transmission and Streaming
+## Big Data Messaging and Streaming
 
+* [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 * [Apache Kafka](reliability-data-transmission/apache-kafka.md)
 
 ## Protocols
 
+* [Protocols](protocols.md)
 * [WebSocket](Back-End Development/WebSocket.md)
 
 ## Android
