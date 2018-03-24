@@ -10,6 +10,7 @@
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 * [Cache Replication](cache-replication.md)
+* [Protocols](protocols.md)
 
 ## Front-End Development
 
