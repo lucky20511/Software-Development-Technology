@@ -12,6 +12,7 @@
 * [3 Cache Update Methods](three-cache-update-methods.md)
 * [Replication and Partition](replication-and-partition.md)
 * [Sharding](sharding.md)
+* [Scale Out Read-heavy and Write-heavy Workload](scale-out-read-heavy-and-write-heavy-workload.md)
 
 ## Big Data Messaging and Streaming
 
