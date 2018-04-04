@@ -10,6 +10,7 @@
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Cache Replication](cache-replication.md)
 * [3 Cache Update Methods](three-cache-update-methods.md)
+* [Replication and Partition](replication-and-partition.md)
 
 ## Big Data Messaging and Streaming
 

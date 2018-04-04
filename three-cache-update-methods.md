@@ -42,7 +42,7 @@ Using the write-back policy, data is written to the cache and Then I/O completio
 ```
 def write_back(cache, datum):
     cache.write(datum)
-    
+
 # Maybe kick-off writing to backing store asynchronously, but don't wait for it.
 ```
 
@@ -54,7 +54,7 @@ def write_back(cache, datum):
 
 The write-back policy is the best performer for mixed workloads as both read and write I/O have similar response time levels. In reality, you can add resiliency \(e.g. by duplicating writes\) to reduce the likelihood of data loss.
 
-#   {#which-one-should-i-use_1}
+#  {#which-one-should-i-use_1}
 
 
 
