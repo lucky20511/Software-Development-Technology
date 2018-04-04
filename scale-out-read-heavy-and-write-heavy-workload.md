@@ -2,11 +2,19 @@
 
 ### Read-Heavy
 
+Consistency Level \(Quorum\)
 
+Cache
 
+Replication
 
+MessageQueue
 
 ### Write Heavy
 
+Consistency Level \(Quorum\)
 
+Cache
+
+Sharding
 
