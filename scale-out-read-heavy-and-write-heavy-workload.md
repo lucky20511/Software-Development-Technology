@@ -4,7 +4,7 @@
 
 Consistency Level \(Quorum\)
 
-Cache
+Cache \(write-through\)
 
 Replication
 
