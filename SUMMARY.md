@@ -11,6 +11,7 @@
 * [Cache Replication](cache-replication.md)
 * [3 Cache Update Methods](three-cache-update-methods.md)
 * [Replication and Partition](replication-and-partition.md)
+* [Sharding](sharding.md)
 
 ## Big Data Messaging and Streaming
 
