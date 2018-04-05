@@ -5,15 +5,19 @@
 * [Introduction](README.md)
 * [System Design Process](system-architecture-design/system-design-process.md)
 * [Scalable Software Architecture Materials](system-architecture-design/scalable-software-architecture-materials.md)
-* [Consistency of Cassandra](consistency-of-cansandra.md)
-* [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
-* [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Cache Replication](cache-replication.md)
 * [3 Cache Update Methods](three-cache-update-methods.md)
 * [Replication and Partition](replication-and-partition.md)
 * [Sharding](sharding.md)
 * [Scale Out Read-heavy and Write-heavy Workload](scale-out-read-heavy-and-write-heavy-workload.md)
 * [Concurrent Request Handling](concurrent-request-handling.md)
+
+## Cassandra
+
+* [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
+* [Consistency of Cassandra](consistency-of-cansandra.md)
+* [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
+* [Request Coordinating](request-coordinating.md)
 
 ## Big Data Messaging and Streaming
 
