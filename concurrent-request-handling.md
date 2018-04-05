@@ -16,28 +16,14 @@ user do an action
 However, this is not how web applications, or indeed any application with a database as the back-end, work. Web apps do this:
 
 ```
-user 
-do
- an action
-       
-│
-
+user do an action
+       │
        v
  application start processing action
-   
-└──
->
- make database request
-          
-└──
->
-do
- nothing until request completes
+   └──> make database request
+          └──> do nothing until request completes
  request complete
-   
-└──
->
- send result to user
+   └──> send result to user
 ```
 
 In this scenario, the software spend most of its running time using 0% CPU time waiting for the database to return.
@@ -47,48 +33,15 @@ In this scenario, the software spend most of its running time using 0% CPU time 
 Multithreaded network apps handle the above workload like this:
 
 ```
-request 
-──
->
- spawn thread
-              
-└──
->
- wait 
-for
- database request
-                     
-└──
->
- answer request
-request 
-──
->
- spawn thread
-              
-└──
->
- wait 
-for
- database request
-                     
-└──
->
- answer request
-request 
-──
->
- spawn thread
-              
-└──
->
- wait 
-for
- database request
-                     
-└──
->
- answer request
+request ──> spawn thread
+              └──> wait for database request
+                     └──> answer request
+request ──> spawn thread
+              └──> wait for database request
+                     └──> answer request
+request ──> spawn thread
+              └──> wait for database request
+                     └──> answer request
 ```
 
 So the thread spend most of their time using 0% CPU waiting for the database to return data. While doing so they have had to allocate the memory required for a thread which includes a completely separate program stack for each thread etc. Also, they would have to start a thread which while is not as expensive as starting a full process is still not exactly cheap.
@@ -98,30 +51,12 @@ So the thread spend most of their time using 0% CPU waiting for the database to 
 Since we spend most of our time using 0% CPU, why not run some code when we're not using CPU? That way, each request will still get the same amount of CPU time as multithreaded applications but we don't need to start a thread. So we do this:
 
 ```
-request 
-──
->
- make database request
-request 
-──
->
- make database request
-request 
-──
->
- make database request
-database request complete 
-──
->
- send response
-database request complete 
-──
->
- send response
-database request complete 
-──
->
- send response
+request ──> make database request
+request ──> make database request
+request ──> make database request
+database request complete ──> send response
+database request complete ──> send response
+database request complete ──> send response
 ```
 
 In practice both approaches return data with roughly the same latency since it's the database response time that dominates the processing.
