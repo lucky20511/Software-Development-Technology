@@ -73,9 +73,9 @@ Do not use:
 * On a frequently updated or deleted columns
 * To look for a row in a large partition unless narrowly queried
 
+# ------------------------------- {#understand-and-use-the-dml-subset-of-cql}
 
-
-
+#  {#understand-and-use-the-dml-subset-of-cql}
 
 # Understand and use the DML subset of CQL {#understand-and-use-the-dml-subset-of-cql}
 
@@ -126,7 +126,6 @@ BEGIN BATCH
   DELETE FROM albums_by_performer WHERE performer = 'The Beatles' AND year = 1966 AND title = 'Revolver'; 
   INSERT INTO albums_by_performer (performer, year, title, genre) VALUES ('The Beatles', 1966, 'Revolver', 'Rock');
 APPLY BATCH;
-
 ```
 
 Lightweight transactions in batch
