@@ -19,6 +19,7 @@
 * [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
 * [Request Coordinating](request-coordinating.md)
 * [Replication](replication.md)
+* [Data Read and Write](data-read-and-write.md)
 
 ## Big Data Messaging and Streaming
 
