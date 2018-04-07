@@ -20,6 +20,7 @@
 * [Request Coordinating](request-coordinating.md)
 * [Replication](replication.md)
 * [Data Read and Write](data-read-and-write.md)
+* [Data Models](data-models.md)
 
 ## Big Data Messaging and Streaming
 
