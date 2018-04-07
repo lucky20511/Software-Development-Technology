@@ -18,6 +18,7 @@
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
 * [Request Coordinating](request-coordinating.md)
+* [Replication](replication.md)
 
 ## Big Data Messaging and Streaming
 
