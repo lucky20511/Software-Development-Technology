@@ -22,6 +22,7 @@
 * [Data Read and Write](data-read-and-write.md)
 * [Data Models](data-models.md)
 * [DDL and DML](ddl-and-dml.md)
+* [Consistency Level](consistency-level.md)
 
 ## Big Data Messaging and Streaming
 
