@@ -21,6 +21,7 @@
 * [Replication](replication.md)
 * [Data Read and Write](data-read-and-write.md)
 * [Data Models](data-models.md)
+* [DDL and DML](ddl-and-dml.md)
 
 ## Big Data Messaging and Streaming
 
