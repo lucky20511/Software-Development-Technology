@@ -25,17 +25,13 @@ Use`NetworkTopologyStrategy`when you have \(or plan to have\) your cluster deplo
 When deciding how many replicas to configure in each datacenter, the two primary considerations are \(1\) being able to satisfy reads locally, without incurring cross data-center latency, and \(2\) failure scenarios. The two most common ways to configure multiple datacenter clusters are:
 
 * Two replicas in each datacenter: This configuration tolerates the failure of a single node per replication group and still allows local reads at a consistency level of`ONE`.
-* Three replicas in each datacenter: This configuration tolerates either the failure of one node per replication group at a strong consistency level of `LOCAL_QUORUM `or multiple node failures per datacenter using consistency level`ONE`.
+* Three replicas in each datacenter: This configuration tolerates either the failure of one node per replication group at a strong consistency level of `LOCAL_QUORUM`or multiple node failures per datacenter using consistency level`ONE`.
 
 Asymmetrical replication groupings are also possible. For example, you can have three replicas in one datacenter to serve real-time application requests and use a single replica elsewhere for running analytics.
 
-Replicationstrategy is defined per keyspace, and is set during keyspace creation. 
+Replication strategy is defined per keyspace, and is set during keyspace creation.
 
 To set up a keyspace, see [creating a keyspace](https://docs.datastax.com/en/cql/3.3/cql/cql_using/useCreateKeyspace.html).
-
-
-
-
 
 ![](http://marianogappa.github.io/cassandra-replication-slides/images/ring.png)
 
