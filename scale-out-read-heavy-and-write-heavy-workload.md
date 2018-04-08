@@ -14,7 +14,9 @@ MessageQueue
 
 Consistency Level \(Quorum\)
 
+Sharding
+
 Cache \(write-back\)
 
-Sharding
+
 
