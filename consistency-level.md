@@ -40,11 +40,11 @@ Consistency Level: sets how many of the nodes to be sent a given request must ac
 
 ## About the QUORUM levels {#about-the-quorum-levels}
 
-$$quorum = \(sum of replication\_factors / 2\) + 1$$
+$$quorum = (sum of replication\_factors / 2) + 1$$
 
 The sum of all the replication\_factor settings for each data center is the sum of replication factors.
 
 If consistency is a top priority, you can ensure that a read always reflects the most recent write by using the following formula:
 
-$$\(nodes written + nodes read\) &gt; replication factor $$
+$$(nodes written + nodes read) > replication factor $$
 

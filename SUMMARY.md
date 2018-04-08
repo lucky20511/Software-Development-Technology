@@ -21,9 +21,10 @@
 * [How is data read](data-read-and-write.md)
 * [Consistency Level](consistency-level.md)
 * [DDL and DML](ddl-and-dml.md)
+* [UUID and TIMEUUID](uuid-and-timeuuid.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
-* How is data written
+* UUID and TIMEUUID
 
 ## Big Data Messaging and Streaming
 
