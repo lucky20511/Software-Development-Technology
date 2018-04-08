@@ -14,15 +14,15 @@
 
 ## Cassandra
 
+* [Request Coordinating](request-coordinating.md)
+* [Data Models](data-models.md)
+* [Data Read and Write](data-read-and-write.md)
+* [Replication](replication.md)
+* [Consistency Level](consistency-level.md)
+* [DDL and DML](ddl-and-dml.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * [How Not To Use Cassandra Like An RDBMS \(and what will happen if you do\)](how-not-to-use-cassandra-like-an-rdbms-and-what-will-happen-if-you-do.md)
-* [Request Coordinating](request-coordinating.md)
-* [Replication](replication.md)
-* [Data Read and Write](data-read-and-write.md)
-* [Data Models](data-models.md)
-* [DDL and DML](ddl-and-dml.md)
-* [Consistency Level](consistency-level.md)
 
 ## Big Data Messaging and Streaming
 
