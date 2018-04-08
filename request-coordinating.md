@@ -40,9 +40,9 @@ A node's partitioner hashes a token from the partition key value of a write requ
 
 Cassandra offers three partitioners
 
-* Murmur3Partitioner \(default\): uniform distribution based on Murmur3 hash
-* RandomPartitioner: uniform distribution based on MD5 hash
-* ByteOrderedPartitioner \(legacy only\): lexical distribution based on key bytes
+* Murmur3 Partitioner \(default\): uniform distribution based on Murmur3 hash
+* Random Partitioner: uniform distribution based on MD5 hash
+* ByteOrdered Partitioner \(legacy only\): lexical distribution based on key bytes
 
 ## What are virtual nodes? {#what-are-virtual-nodes}
 
