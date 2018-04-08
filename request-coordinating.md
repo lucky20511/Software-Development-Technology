@@ -1,6 +1,6 @@
 # Understand how requests are coordinated {#understand-how-requests-are-coordinated}
 
-https://www.slideshare.net/DataStax/understanding-data-partitioning-and-replication-in-apache-cassandra
+[https://www.slideshare.net/DataStax/understanding-data-partitioning-and-replication-in-apache-cassandra](https://www.slideshare.net/DataStax/understanding-data-partitioning-and-replication-in-apache-cassandra)
 
 Cassandra has a masterless 「ring」 architecture that is elegant, easy to set up, and easy to maintain.
 
@@ -49,6 +49,8 @@ Cassandra offers three partitioners
 There's one token per node, and thusly a node owns exactly one contiguous range in the ringspace.Vnodes change this paradigm from one token or range per node, to many per node. Within a cluster these can be randomly selected and be non-contiguous, giving us many smaller ranges that belong to each node.![](http://www.datastax.com/wp-content/uploads/2012/10/VNodes1.png)
 
 ## How are virtual nodes helpful? {#how-are-virtual-nodes-helpful}
+
+Having many smaller token ranges \(nodes\) on each physical node allows for a more even distribution of data. This becomes evident when you add a physical node to the cluster, in that rebalancing \(manually reassigning token ranges\) is no longer necessary.
 
 * token ranges are distributed, so machines bootstrap faster
 * impact of virtual node failure is spread across entire cluster
