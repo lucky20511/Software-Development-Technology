@@ -91,6 +91,8 @@ Do not use:
 
 ## What is an "upsert"? {#what-is-an-upsert}
 
+* Cassandra is a distributed database that avoids reading before a write, so an INSERT or UPDATE sets the column values you specify regardless of whether the row already exists. This means inserts can update existing rows, and updates can create new rows. It also means it’s easy to accidentally overwrite existing data, so keep that in mind.
+
 * Both UPDATE and INSERT are write operations
 * No reading before writing
 
