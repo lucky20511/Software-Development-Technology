@@ -1,5 +1,7 @@
 # Understand how requests are coordinated {#understand-how-requests-are-coordinated}
 
+https://www.slideshare.net/DataStax/understanding-data-partitioning-and-replication-in-apache-cassandra
+
 Cassandra has a masterless 「ring」 architecture that is elegant, easy to set up, and easy to maintain.
 
 ![](https://academy.datastax.com/sites/default/files/cassandra-ring_0.png "Figure 1. Cassandra sports a masterless ring architecture")
@@ -10,7 +12,7 @@ Cassandra has a masterless 「ring」 architecture that is elegant, easy to set 
 * Rack: a logical set of nodes
 * Data Center: a logical set of racks
 * Cluster: the full set of nodes which map to a single complete token ring
-  ![](https://pandaforme.gitbooks.io/introduction-to-cassandra/content/Screen%20Shot%202016-02-23%20at%2015.24.40.png)
+  ![](https://pandaforme.gitbooks.io/introduction-to-cassandra/content/Screen Shot 2016-02-23 at 15.24.40.png)
 
 ## What is a coordinator? {#what-is-a-coordinator}
 
@@ -21,9 +23,10 @@ The node chosen by the client to receive a particular read or write request to i
 * The coordinator manages the Replication Factor \(RF\)
   * Replication factor \(RF\) – onto how many nodes should a write be copied?
 * The coordinator also applies the Consistency Level \(CL\)
+
   * Consistency level \(CL\) – how many nodes must acknowledge a read or write request
- 
-    ![](https://pandaforme.gitbooks.io/introduction-to-cassandra/content/Screen%20Shot%202016-02-23%20at%2015.png)
+
+    ![](https://pandaforme.gitbooks.io/introduction-to-cassandra/content/Screen Shot 2016-02-23 at 15.png)
 
 ## What is the partitioner? {#what-is-the-partitioner}
 
