@@ -28,7 +28,7 @@ a top-level namespace for a CQL table schema
 
 ## UUID {#uuid}
 
-universally unique identifiers
+universally unique identifiers, which is used for avoiding column collision.
 
 Format:`hex{8}-hex{4}-hex{4}-hex{4}-hex{12}`
 
