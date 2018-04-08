@@ -66,15 +66,11 @@ SELECT * FROM playlists WHERE id = 62c36092-82a1-3a00-93d1-46196ee77204
 
 The output looks something like this:
 
-
-
 ![](https://docs.datastax.com/en/cql/3.1/cql/images/select_desc.png)
-
-
 
 Cassandra stores an entire row of data on a node by partition key. If you have too much data in a partition and want to spread the data over multiple nodes, use a [composite partition key](https://docs.datastax.com/en/cql/3.1/cql/cql_reference/refCompositePk.html).
 
-## Key \(Partition Key\) {#key-partition-key}
+## Illustration {#key-partition-key}
 
 ### Composite row key {#composite-row-key}
 
