@@ -22,9 +22,10 @@
 * [Consistency Level](consistency-level.md)
 * [DDL and DML](ddl-and-dml.md)
 * [UUID and TIMEUUID](uuid-and-timeuuid.md)
+* [Data Types](data-types.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
-* UUID and TIMEUUID
+* Data Types
 
 ## Big Data Messaging and Streaming
 
