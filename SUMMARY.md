@@ -31,6 +31,9 @@
 
 * [RabbitMQ vs Kafka](rabbitmq-vs-kafka.md)
 * [Apache Kafka](reliability-data-transmission/apache-kafka.md)
+* [Kafka Architecture](kafka-architecture.md)
+
+## Spring
 
 ## Protocols
 
