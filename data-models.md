@@ -50,7 +50,7 @@ in the definition of a partition key.\) In the music service's playlists table, 
 . In the playlists table below, the song\_order is defined as the clustering column column:
 
 ```
-PRIMARYKEY (id, song_order));
+PRIMARYKEY (id, song_order);
 ```
 
 The data for each partition is clustered by the remaining column or columns of the primary key definition. On a physical node, when rows for a partition key are stored in order based on the clustering columns, retrieval of rows is very efficient. For example, because the id in the playlists table is the partition key, all the songs for a playlist are clustered in the order of the remaining song\_order column. The others columns are displayed in alphabetical order by Cassandra.
@@ -69,6 +69,10 @@ The output looks something like this:
 ![](https://docs.datastax.com/en/cql/3.1/cql/images/select_desc.png)
 
 Cassandra stores an entire row of data on a node by partition key. If you have too much data in a partition and want to spread the data over multiple nodes, use a [composite partition key](https://docs.datastax.com/en/cql/3.1/cql/cql_reference/refCompositePk.html).
+
+# unbalanced Cassandra Cluster
+
+Data can also end up unevenly distributed if your data model is not designed for your data profile. You must have a good understanding of your domain and your data model must be fit for your domain. In Cassandra, your partition key is responsible for your distributing data across a cluster and must be carefully chosen.
 
 ## Illustration {#key-partition-key}
 
