@@ -11,6 +11,7 @@
 * [Sharding](sharding.md)
 * [Scale Out Read-heavy and Write-heavy Workload](scale-out-read-heavy-and-write-heavy-workload.md)
 * [Concurrent Request Handling](concurrent-request-handling.md)
+* [Cache vs Session Store](cache-vs-session-store.md)
 
 ## Cassandra
 
