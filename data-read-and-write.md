@@ -8,27 +8,22 @@ Cassandra processes data at several stages on the read path to discover where th
 * Check row cache, if enabled
 * Checks Bloom filter
 * Checks partition key cache, if enabled
-* Goes directly to the compression offset map if a partition key is found in the partition key cache, or checks the partition summary if not
+* Goes directly to the compression offset map if a partition key is found in the partition key cache, or checks the partition summary if not  
   If the partition summary is checked, then the partition index is accessed
 
 * Locates the data on disk using the compression offset map
+
 * Fetches the data from the SSTable on disk
 
 Read request flow
 
-
-
 ![](https://docs.datastax.com/en/cassandra/3.0/cassandra/images/dml_caching-reads_12.png)
 
+### Row Cache and Key Cache in Cassandra
 
-
-Row cache and Key cache request flow
-
-
+**Row cache** and **Key cache** request flow
 
 ![](https://docs.datastax.com/en/cassandra/3.0/cassandra/images/ops_how-cache-works.png)
-
-
 
 ## Memtable
 
@@ -71,6 +66,4 @@ Note:
 Within a partition, all rows are not equally expensive to query. The very beginning of the partition \(the first rows, clustered by your key definition\) is slightly less expensive to query because there is no need to consult the partition-level index.
 
 The compression offset map grows to 1-3 GB per terabyte compressed. The more you compress data, the greater number of compressed blocks you have and the larger the compression offset table. Compression is enabled by default even though going through the compression offset map consumes CPU resources. Having compression enabled makes the page cache more effective, and typically, almost always pays off.
-
-
 
