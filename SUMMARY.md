@@ -43,6 +43,7 @@
 * Synchronization and Lock
 * Atomic Variables and Data Structure
 * How to Prevent Deadlock
+* 2 Phase Lock and Commit
 
 ## Protocols
 
