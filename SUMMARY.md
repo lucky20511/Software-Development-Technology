@@ -40,7 +40,7 @@
 ## Java Programming
 
 * [Multi-thread and Executor](java-programming/concurrency-and-multi-thread-in-java.md)
-* Synchronization and Lock
+* [Synchronization and Lock](java-programming/synchronization-and-lock.md)
 * Atomic Variables and Data Structure
 * How to Prevent Deadlock
 * 2 Phase Lock and Commit
