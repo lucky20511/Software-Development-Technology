@@ -1,5 +1,7 @@
 Another more simple article:  
-https://www.callicoder.com/java-executor-service-and-thread-pool-tutorial/
+[https://www.callicoder.com/java-executor-service-and-thread-pool-tutorial/](https://www.callicoder.com/java-executor-service-and-thread-pool-tutorial/)
+
+# Java 8 Concurrency Tutorial: Synchronization and Locks
 
 ### Threads and Runnables
 
