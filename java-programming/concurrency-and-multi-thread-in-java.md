@@ -1,12 +1,5 @@
-Welcome to the first part of my Java 8 Concurrency tutorial. This guide teaches you[concurrent programming](http://en.wikipedia.org/wiki/Concurrent_computing)in Java 8 with easily understood code examples. It's the first part out of a series of tutorials covering the Java Concurrency API. In the next 15 min you learn how to execute code in parallel via threads, tasks and executor services.
-
-* Part 1: Threads and Executors
-* Part 2:
-  [Synchronization and Locks](http://winterbe.com/posts/2015/04/30/java8-concurrency-tutorial-synchronized-locks-examples/)
-* Part 3:
-  [Atomic Variables and ConcurrentMap](http://winterbe.com/posts/2015/05/22/java8-concurrency-tutorial-atomic-concurrent-map-examples/)
-
-The[Concurrency API](https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/package-summary.html)was first introduced with the release of Java 5 and then progressively enhanced with every new Java release. The majority of concepts shown in this article also work in older versions of Java. However my code samples focus on Java 8 and make heavy use of lambda expressions and other new features. If you're not yet familiar with lambdas I recommend reading my[Java 8 Tutorial](http://winterbe.com/posts/2014/03/16/java-8-tutorial/)first.
+Another more simple article:  
+https://www.callicoder.com/java-executor-service-and-thread-pool-tutorial/
 
 ### Threads and Runnables
 
