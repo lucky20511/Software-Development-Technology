@@ -41,7 +41,7 @@
 
 * [Multi-thread and Executor](java-programming/concurrency-and-multi-thread-in-java.md)
 * [Synchronization and Lock](java-programming/synchronization-and-lock.md)
-* Atomic Variables and Data Structure
+* [Atomic Variables and Data Structure](java-programming/atomic-variables-and-data-structure.md)
 * How to Prevent Deadlock
 * 2 Phase Lock and Commit
 
