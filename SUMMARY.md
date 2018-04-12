@@ -42,8 +42,9 @@
 * [Multi-thread and Executor](java-programming/concurrency-and-multi-thread-in-java.md)
 * [Synchronization and Lock](java-programming/synchronization-and-lock.md)
 * [Atomic Variables and Data Structure](java-programming/atomic-variables-and-data-structure.md)
-* How to Prevent Deadlock
-* 2 Phase Lock and Commit
+* [How to Prevent Deadlock](java-programming/how-to-prevent-deadlock.md)
+* [2 Phase Lock and Commit](java-programming/2-phase-lock-and-commit.md)
+* [Java 8 Lambda Tutorial ](java-programming/java-8-lambda-tutorial.md)
 
 ## Protocols
 
