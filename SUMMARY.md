@@ -45,6 +45,7 @@
 * [How to Prevent Deadlock](java-programming/how-to-prevent-deadlock.md)
 * [2 Phase Lock and Commit](java-programming/2-phase-lock-and-commit.md)
 * [Java 8 Lambda Tutorial ](java-programming/java-8-lambda-tutorial.md)
+* [Future vs CompletableFuture](java-programming/future-vs-completablefuture.md)
 
 ## Protocols
 
