@@ -28,6 +28,7 @@
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * Data Types
 * [What is Seed Node and Contact Point](what-is-seed-node-and-contact-point.md)
+* [Advantage of Using Spark on Cassandra](advantage-of-using-spark-on-cassandra.md)
 
 ## Big Data Messaging and Streaming
 
