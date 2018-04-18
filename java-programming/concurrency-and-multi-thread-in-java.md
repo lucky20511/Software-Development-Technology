@@ -112,6 +112,18 @@ finally {
 
 The executor shuts down softly by waiting a certain amount of time for termination of currently running tasks. After a maximum of five seconds the executor finally shuts down by interrupting all running tasks.
 
+**Few options of Thread Pools:**
+
+**newFixedThreadPool\(int nThreads\)**– n threads will process tasks at the time, when the pool is saturated, new tasks will get added to a queue without a limit on size. Good for CPU intensive tasks.
+
+**newWorkStealingPool\(int parallelism\)**– will create and shut down threads dynamically to accommodate the required parallelism level. It also tries to reduce the contention on the task queue, so can be really good in heavily loaded environments. Also good when your tasks create more tasks for the executor, like recursive tasks.
+
+**newSingleThreadExecutor\(\)**– creates an unconfigurable \`newFixedThreadPool\(1\)\`, so you know that only one thread will process everything. Good when you really need predictability and sequential tasks completion.
+
+**newCachedThreadPool\(\)**– doesn’t put tasks into a queue. Consider this as the same as using a queue with the maximum size of 0. When all current threads are busy, it creates another thread to run the task. Sometimes it can reuse threads. Good for denial of service attacks on your own servers. The problem with a cached thread pool is that it doesn’t know when to stop spawning more and more threads. Imagine the situation where you have computationally intensive tasks that you submit into this executor. The more threads that consuming the CPU, the slower every individual task takes to process. This has a domino effect in that it means more work gets backlogged. As the result you’ll end up with more and more threads spawned making task processing even slower. This negative feedback loop is a hard problem to solve.
+
+
+
 #### Callables and Futures
 
 In addition to`Runnable`executors support another kind of task named`Callable`. Callables are functional interfaces just like runnables but instead of being`void`they return a value.
