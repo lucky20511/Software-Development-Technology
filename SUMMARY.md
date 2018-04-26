@@ -26,7 +26,7 @@
 * [Data Types](data-types.md)
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
-* Data Types
+* [Data Types](data-types.md)
 * [What is Seed Node and Contact Point](what-is-seed-node-and-contact-point.md)
 * [Advantage of Using Spark on Cassandra](advantage-of-using-spark-on-cassandra.md)
 
