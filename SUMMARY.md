@@ -36,6 +36,7 @@
 * [Apache Kafka](reliability-data-transmission/apache-kafka.md)
 * [Kafka Architecture](kafka-architecture.md)
 * [Kafka Introduction](kafka-introduction.md)
+* [Kafka Producer sync and async](kafka-producer-sync-and-async.md)
 
 ## Spring
 
