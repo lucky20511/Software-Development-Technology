@@ -42,6 +42,7 @@
 ## Spring
 
 * [IOC container](spring/spring-framework-introduction.md)
+* [Dao Java example](spring/dao-java-example.md)
 
 ## Java Programming
 
