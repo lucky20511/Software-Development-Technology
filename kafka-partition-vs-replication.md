@@ -6,7 +6,17 @@
 
 Youtube:
 
-https://www.youtube.com/watch?v=udnX21\_\_SuU
+[https://www.youtube.com/watch?v=udnX21\_\_SuU](https://www.youtube.com/watch?v=udnX21__SuU)
+
+
+
+
+
+| `send(ProducerRecord<K,V> record):Future<RecordMetadata>;` |
+| :--- |
+
+
+A`ProducerRecord`contains a key \(K\) and a value \(V\). The value is the payload of your message \(unlike in JMS there is no`Message`construct that allows you to send additional message metadata\). The key is a business value provided by you that is used to shard your messages across the partitions.
 
 
 
