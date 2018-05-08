@@ -2,7 +2,7 @@
 
 # Kafka in a Nutshell
 
-Posted on September 25, 2015  • [kafka](https://sookocheff.com/tags/kafka)
+Posted on September 25, 2015  • [kafka](https://sookocheff.com/tags/kafka)
 
 Kafka is a messaging system. That’s it. So why all the hype? In reality messaging is a hugely important piece of infrastructure for moving data between systems. To see why, let’s look at a data pipeline without a messaging system.
 
@@ -32,11 +32,13 @@ Kafka is a distributed messaging system providing fast, highly scalable and redu
 
 The basic architecture of Kafka is organized around a few key terms: topics, producers, consumers, and brokers.
 
-All Kafka messages are organized into_topics_. If you wish to send a message you send it to a specific topic and if you wish to read a message you read it from a specific topic. A_consumer_pulls messages off of a Kafka topic while_producers_push messages into a Kafka topic. Lastly, Kafka, as a distributed system, runs in a cluster. Each node in the cluster is called a Kafka_broker_.
+All Kafka messages are organized into_topics_. If you wish to send a message you send it to a specific topic and if you wish to read a message you read it from a specific topic. A_consumer\_pulls messages off of a Kafka topic while\_producers\_push messages into a Kafka topic. Lastly, Kafka, as a distributed system, runs in a cluster. Each node in the cluster is called a Kafka\_broker_.
 
 ## Anatomy of a Kafka Topic {#anatomy-of-a-kafka-topic}
 
-Kafka topics are divided into a number of_partitions_. Partitions allow you to parallelize a topic by splitting the data in a particular topic across multiple brokers — each partition can be placed on a separate machine to allow for multiple consumers to read from a topic in parallel. Consumers can also be parallelized so that multiple consumers can read from multiple partitions in a topic allowing for very high message processing throughput.
+Kafka topics are divided into a number of_partitions_. Partitions allow you to parallelize a topic by splitting the data in a particular topic across multiple brokers — each partition can be placed on 
+
+a separate machine to allow for multiple consumers to read from a topic in parallel. Consumers can also be parallelized so that multiple consumers can read from multiple partitions in a topic allowing for very high message processing throughput.
 
 Each message within a partition has an identifier called its_offset_. The offset the ordering of messages as an immutable sequence. Kafka maintains this message ordering for you. Consumers can read messages starting from a specific offset and are allowed to read from any offset point they choose, allowing consumers to join the cluster at any point in time they see fit. Given these constraints, each specific message in a Kafka cluster can be uniquely identified by a tuple consisting of the message’s topic, partition, and offset within the partition.
 
