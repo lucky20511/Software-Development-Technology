@@ -37,7 +37,7 @@ Rows may be described as`skinny`or`wide`
 
 ## Key {#key-partition-key}
 
-A compound primary key consists of the partition key and one or more additional[columns](https://docs.datastax.com/en/glossary/doc/glossary/gloss_column.html)that determine clustering. The[partition key](https://docs.datastax.com/en/glossary/doc/glossary/gloss_partition_key.html)determines which node stores the data. It is responsible for data distribution across the nodes. The additional columns determine per-partition clustering.[Clustering](https://docs.datastax.com/en/glossary/doc/glossary/gloss_clustering.html)is a storage engine process that sorts data within the partition.
+A compound primary key consists of the partition key and one or more additional [columns](https://docs.datastax.com/en/glossary/doc/glossary/gloss_column.html) that determine clustering. The [partition key](https://docs.datastax.com/en/glossary/doc/glossary/gloss_partition_key.html) determines which node stores the data. It is responsible for data distribution across the nodes. The additional columns determine per-partition clustering. [Clustering](https://docs.datastax.com/en/glossary/doc/glossary/gloss_clustering.html) is a storage engine process that sorts data within the partition.
 
 In a simple primary key, Apache Cassandra™ uses the first column name as the partition key. \(Note that Cassandra can use
 
