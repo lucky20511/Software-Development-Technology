@@ -2,8 +2,6 @@
 
 # Modern hinted handoff
 
-BY[JONATHAN ELLIS](https://www.datastax.com/author/jonathan-ellis) - DECEMBER 11, 2012\|[9 COMMENTS](https://www.datastax.com/dev/blog/modern-hinted-handoff#comments)
-
 Hinted Handoff is an optional part of[writes in Cassandra](https://www.datastax.com/docs/1.1/dml/about_writes), enabled by default, with two purposes:
 
 1. Hinted handoff allows Cassandra to offer full write availability when
@@ -21,7 +19,7 @@ Once a node discovers via[gossip](https://www.datastax.com/docs/1.1/cluster_arch
 
 ### Hinted Handoff and ConsistencyLevel
 
-A hinted write does not count towards[ConsistencyLevel](https://www.datastax.com/docs/1.1/dml/data_consistency)requirements of ONE, QUORUM, or ALL. If insufficient replica targets are alive to sastisfy a requested ConsistencyLevel, UnavailableException will be thrown with or without Hinted Handoff. \(This is an important difference from[Dynamo's](http://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)replication model; Cassandra does_not_default to sloppy quorum. But, see "Extreme write availability" below.\)
+A hinted write does not count towards[ConsistencyLevel](https://www.datastax.com/docs/1.1/dml/data_consistency)requirements of ONE, QUORUM, or ALL. If insufficient replica targets are alive to sastisfy a requested ConsistencyLevel, UnavailableException will be thrown with or without Hinted Handoff. \(This is an important difference from[Dynamo's](http://www.allthingsdistributed.com/2007/10/amazons_dynamo.html)replication model; Cassandra does\_not\_default to sloppy quorum. But, see "Extreme write availability" below.\)
 
 To see why, let's look at a simple cluster of two nodes, A and B, and a replication factor \(RF\) of 1: each row is stored on one node.
 
@@ -57,7 +55,4 @@ At first glance, it may appear that Hinted Handoff lets you safely get away with
 2. We can also lose hints-not-yet-replayed from requests the failed node coordinated
 
 With sufficient dedication, you can get by with "only run repair after hardware failure and rely on hinted handoff the rest of the time," but as your clusters grow \(and hardware failure becomes more common\) performing repair as a one-off special case will become increasingly difficult to do perfectly. Thus, we continue to recommend running a full repair weekly.
-
-  
-
 

@@ -27,8 +27,8 @@
 * [Data Replication in NoSQL Databases Explained](data-replication-in-nosql-databases-explained.md)
 * [Consistency of Cassandra](consistency-of-cansandra.md)
 * [What is Seed Node and Contact Point](what-is-seed-node-and-contact-point.md)
-* [Advantage of Using Spark on Cassandra](advantage-of-using-spark-on-cassandra.md)
 * [Hinted Handoff](hinted-handoff.md)
+* [Advantage of Using Spark on Cassandra](advantage-of-using-spark-on-cassandra.md)
 
 ## Big Data Messaging and Streaming
 
