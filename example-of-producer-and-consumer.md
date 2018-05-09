@@ -19,15 +19,17 @@
 
  // sync or async
  Producer<String, String> producer = new KafkaProducer<>(props);
- for(int i = 0; i < 100; i++)
+ 
+ for (int i = 0; i < 100; i++) {
      //sync
      producer.send(new ProducerRecord<String, String>("my-topic", Integer.toString(i), Integer.toString(i)))
          .get();
-    
+
     //async
     producer.send(new ProducerRecord<String, String>("my-topic", Integer.toString(i), Integer.toString(i)),
         new DemoCallBack(startTime, messageNo, messageStr));
 
+}
  producer.close();
 ```
 

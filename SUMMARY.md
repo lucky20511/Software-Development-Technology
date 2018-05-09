@@ -45,6 +45,7 @@
 * [IOC container](spring/spring-framework-introduction.md)
 * [Dao Java example](spring/dao-java-example.md)
 * [Cassandra Dao in Spring Boot](spring/cassandra-dao-in-spring-boot.md)
+* [Autowired v.s getBean](spring/autowired-vs-getbean.md)
 
 ## Java Programming
 
