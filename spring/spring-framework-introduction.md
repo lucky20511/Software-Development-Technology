@@ -16,5 +16,13 @@
 * Convenient MessageSource access \(for i18n\)
 * ApplicationEvent publication
 
+### How to instantiate prototype bean each time?
+
+Spring provides method injection to solve the above problem. It is a another kind of injection used for dynamically overridding a class and its **abstract** methods to create instances every time the bean is injected. 
+
+
+
+
+
 
 
