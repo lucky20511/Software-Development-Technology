@@ -38,6 +38,7 @@
 * [Kafka Introduction](kafka-introduction.md)
 * [Kafka Producer sync and async](kafka-producer-sync-and-async.md)
 * [Kafka Partition vs Replication](kafka-partition-vs-replication.md)
+* [Example of Producer and Consumer](example-of-producer-and-consumer.md)
 
 ## Spring
 
