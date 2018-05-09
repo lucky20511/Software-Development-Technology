@@ -11,7 +11,7 @@
 **Application Context**
 
 * Bean instantiation/wiring
-* Automatic BeanPostProcessor registration
+* Automatic BeanPostProcessor registration &lt;context:annotation-config/&gt;
 * Automatic BeanFactoryPostProcessor registration
 * Convenient MessageSource access \(for i18n\)
 * ApplicationEvent publication
