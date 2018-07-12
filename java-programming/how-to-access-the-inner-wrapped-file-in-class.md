@@ -1,5 +1,7 @@
 # How to Access the inner file in wrapped class .jar
 
+https://stackoverflow.com/questions/29413713/retrieving-resources-for-a-subpackage-class
+
 Maven has a [standard directory layout](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html). The directory`src/main/resources`is intended for such application resources. Place your text files into it.
 
 You now basically have two options where exactly to place your files:
